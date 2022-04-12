@@ -27,4 +27,6 @@
 	<slot />
 </main>
 
-<footer class="flex justify-center">© 2022 Brute Club</footer>
+<footer class="flex justify-center items-center text-gray-200 bg-slate-800 w-full h-16">
+	© 2022 Brute Club
+</footer>
