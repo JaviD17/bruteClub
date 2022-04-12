@@ -11,9 +11,9 @@
 	];
 </script>
 
-<header class="flex justify-start bg-slate-800 w-full h-16">
+<header class="flex justify-between bg-slate-800 w-full h-16">
 	<Logo />
-	<nav class="flex justify-evenly text-gray-200 items-center w-6/12">
+	<nav class="flex justify-evenly text-gray-200 items-center w-11/12">
 		{#each links as link}
 			<div class="ml-2.5 p-1 rounded-lg hover:bg-slate-900">
 				<a href={link.href}>{link.name}</a>
