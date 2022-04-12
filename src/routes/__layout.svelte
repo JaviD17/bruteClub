@@ -11,11 +11,11 @@
 	];
 </script>
 
-<header class="flex justify-between bg-slate-800 w-full h-16">
+<header class="flex justify-between bg-gray-900 w-full h-16">
 	<Logo />
-	<nav class="flex justify-evenly text-gray-200 items-center w-11/12">
+	<nav class="flex justify-evenly items-center w-11/12">
 		{#each links as link}
-			<div class="ml-2.5 p-1 rounded-lg hover:bg-slate-900">
+			<div class="ml-2.5 p-1 rounded-lg hover:bg-gray-800">
 				<a href={link.href}>{link.name}</a>
 			</div>
 		{/each}
@@ -27,6 +27,6 @@
 	<slot />
 </main>
 
-<footer class="flex justify-center items-center text-gray-200 bg-slate-800 w-full h-16">
+<footer class="flex justify-center items-center bg-gray-900 w-full h-16">
 	© 2022 Brute Club
 </footer>

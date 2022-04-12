@@ -4,11 +4,11 @@
     }
 </script>
 
-<container class="flex justify-end w-1/12 mr-6">
-    <button on:click={handleClick} class="hover:bg-slate-900 rounded-full">
+<container class="flex justify-end w-1/12 mr-5">
+    <button on:click={handleClick} class="hover:bg-gray-800 rounded-full my-1">
         <svg
             fill="#fff"
-            width="40"
+            width="60"
             height="40"
             version="1.1"
             id="lni_lni-user"
