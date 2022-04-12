@@ -4,7 +4,7 @@
     }
 </script>
 
-<container class="flex justify-end w-1/12 mr-5">
+<container class="ml-2.5">
     <button on:click={handleClick} class="hover:bg-gray-800 rounded-full my-1">
         <svg
             fill="#fff"
