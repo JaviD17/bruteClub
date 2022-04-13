@@ -12,7 +12,7 @@
 </script>
 
 <section id="container" class="h-full grid grid-cols-10">
-	<header class="col-span-1 text-2xl">
+	<header class="col-span-1 text-xl">
 		<Logo />
 		<nav>
 			<Profile />
