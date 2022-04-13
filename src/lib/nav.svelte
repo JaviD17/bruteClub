@@ -3,9 +3,9 @@
 
 	let links = [
 		{ name: 'Blog', href: '/blogs' },
-		{ name: 'Calculators', href: '/calculators' },
+		{ name: 'Tools', href: '/tools' },
 		{ name: 'About', href: '/about' },
-		{ name: 'Coaching', href: '/coaching' }
+		{ name: 'Coaches', href: '/coaches' }
 	];
 </script>
 
