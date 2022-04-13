@@ -12,13 +12,13 @@
 </script>
 
 <section id="container" class="h-full grid grid-cols-10">
-	<header class="col-span-1 text-xl">
+	<header class="col-span-1 text-2xl">
 		<Logo />
 		<nav>
 			<Profile />
 			{#each links as link}
-				<div class="text-right mx-2.5 mb-4">
-					<a class="rounded-lg hover:bg-gray-600 p-1 hover:outline outline-offset-2 outline-purple-700" href={link.href}>{link.name}</a>
+				<div class="text-left mx-2.5 mb-6 btns rounded-lg">
+					<a class="rounded-lg p-1" href={link.href}>{link.name}</a>
 				</div>
 			{/each}
 		</nav>

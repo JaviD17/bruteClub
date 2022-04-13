@@ -1,11 +1,22 @@
 <script>
+import { each } from "svelte/internal";
+
+
+    let clicked = false;
+
+    let links = [
+        {name: 'Profile', href: '/profile'},
+        {name: 'Subscriptions', href: '/profile/subscriptions'},
+        {name: 'Settings', href: '/profile/settings'},
+    ];
+
     let handleClick = () => {
-        alert('clicked');
+        clicked = !clicked;
     }
 </script>
 
-<container class="flex justify-end mx-2 mb-4">
-    <button on:click={handleClick} class="hover:bg-gray-600 rounded-full py-2 hover:outline outline-offset-2 outline-purple-700">
+<container class="flex justify-left ml-2 mt-6 mb-6 relative">
+    <button on:click={handleClick} class="rounded-full py-2 btns">
         <svg
             fill="#fff"
             width="60"
@@ -33,3 +44,13 @@
         </svg>
     </button>
 </container>
+
+{#if clicked}
+    <section class="absolute top-0 ml-36 mt-24 rounded-lg">
+        {#each links as link}
+        <div class="rounded m-1 p-1 btns text-xl">
+            <a href={link.href}>{link.name}</a>
+        </div>
+        {/each}
+    </section>
+{/if}
