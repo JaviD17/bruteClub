@@ -12,6 +12,5 @@
 >
 	<div>
 		<h1 class="text-center">Your Darkness is your Development</h1>
-		<h2 class="text-center">Take Control</h2>
 	</div>
 </section>

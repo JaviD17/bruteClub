@@ -15,10 +15,10 @@ import { each } from "svelte/internal";
     }
 </script>
 
-<container class="flex justify-left ml-2 mt-6 mb-6 relative">
+<section class="flex justify-left ml-2 mt-6 mb-6 relative">
     <button on:click={handleClick} class="rounded-full py-2 btns">
         <svg
-            fill="#fff"
+            fill="#9CA3AF"
             width="60"
             height="40"
             version="1.1"
@@ -35,22 +35,28 @@ import { each } from "svelte/internal";
                 <path
                     d="M32,36.4c8.2,0,14.9-6.7,14.9-14.9S40.2,6.5,32,6.5s-14.9,6.7-14.9,14.9S23.8,36.4,32,36.4z M32,10
                 c6.3,0,11.4,5.1,11.4,11.4c0,6.3-5.1,11.4-11.4,11.4c-6.3,0-11.4-5.1-11.4-11.4C20.6,15.2,25.7,10,32,10z"
-                stroke="white" stroke-width="3"/>
+                stroke="white" stroke-width="0"/>
                 <path
                     d="M62.1,54.4c-8.3-7.1-19-11-30.1-11s-21.8,3.9-30.1,11C1.1,55,1,56.1,1.7,56.9c0.6,0.7,1.7,0.8,2.5,0.2
                 c7.7-6.5,17.6-10.1,27.9-10.1s20.2,3.6,27.9,10.1c0.3,0.3,0.7,0.4,1.1,0.4c0.5,0,1-0.2,1.3-0.6C63,56.1,62.9,55,62.1,54.4z"
-                stroke="white" stroke-width="3"/>
+                stroke="white" stroke-width="0"/>
             </g>
         </svg>
     </button>
-</container>
+</section>
 
 {#if clicked}
-    <section class="absolute top-0 ml-36 mt-24 rounded-lg">
+    <section id="submenu" class="absolute top-0 ml-36 mt-24 rounded-lg">
         {#each links as link}
-        <div class="rounded m-1 p-1 btns text-xl">
-            <a href={link.href}>{link.name}</a>
+        <div class="rounded m-2 btns text-lg">
+            <a class="mx-2" href={link.href}>{link.name}</a>
         </div>
         {/each}
     </section>
 {/if}
+
+<style>
+    #submenu {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+</style>
