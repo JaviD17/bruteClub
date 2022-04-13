@@ -3,7 +3,7 @@
 
 	let links = [
 		{ name: 'Blog', href: '/blogs' },
-		{ name: 'Tools', href: '/tools' },
+		{ name: 'Calcs', href: '/calcs' },
 		{ name: 'About', href: '/about' },
 		{ name: 'Coaches', href: '/coaches' }
 	];

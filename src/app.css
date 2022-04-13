@@ -10,3 +10,7 @@
 		@apply hover:bg-gray-700 hover:outline outline-offset-2 outline-purple-700;
 	}
 }
+
+body {
+	background-color: #000;
+}

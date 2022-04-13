@@ -3,7 +3,7 @@
 	import Nav from '$lib/nav.svelte';
 </script>
 
-<header class="col-span-1 text-xl">
+<header class="text-xl">
 	<Logo />
 	<Nav />
 </header>
@@ -11,5 +11,6 @@
 <style>
 	header {
 		background-color: rgba(0, 0, 0, 0.4);
+		grid-area: header;
 	}
 </style>
