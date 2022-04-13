@@ -15,9 +15,3 @@
 		<h2 class="text-center">Take Control</h2>
 	</div>
 </section>
-
-<!-- <style>
-	#hero {
-		background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(./hero.jpg);
-	}
-</style> -->

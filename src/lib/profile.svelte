@@ -4,8 +4,8 @@
     }
 </script>
 
-<container class="ml-2.5">
-    <button on:click={handleClick} class="hover:bg-gray-800 rounded-full my-1">
+<container class="flex justify-end mx-2 mb-4">
+    <button on:click={handleClick} class="hover:bg-gray-600 rounded-full py-2 hover:outline outline-offset-2 outline-purple-700">
         <svg
             fill="#fff"
             width="60"
