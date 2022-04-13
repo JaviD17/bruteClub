@@ -11,6 +11,6 @@
 	class="pt-14 text-6xl"
 >
 	<div>
-		<h1 class="text-center">Your Darkness is your Development</h1>
+		<h1 class="text-center font-bold">Your Darkness is your Development</h1>
 	</div>
 </section>

@@ -18,7 +18,7 @@ import { each } from "svelte/internal";
 <section class="flex justify-left ml-2 mt-6 mb-6 relative">
     <button on:click={handleClick} class="rounded-full py-2 btns">
         <svg
-            fill="#9CA3AF"
+            fill="#D1D5DB"
             width="60"
             height="40"
             version="1.1"
