@@ -5,12 +5,12 @@
 
 <header class="text-xl">
 	<Logo />
-	<Nav />
+	<Nav on:message />
 </header>
 
 <style>
 	header {
-		background-color: rgba(0, 0, 0, 0.4);
+		background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.25));
 		grid-area: header;
 	}
 </style>

@@ -1,4 +1,5 @@
 <script>
+	import Button from '$lib/button/button.svelte';
 	let clicked = false;
 
 	let links = [
@@ -6,44 +7,18 @@
 		{ name: 'Subscriptions', href: '/profile/subscriptions' },
 		{ name: 'Settings', href: '/profile/settings' }
 	];
-
-	let handleClick = () => {
-		clicked = !clicked;
-	};
 </script>
 
-<section class="flex justify-left ml-2 mt-6 mb-6 relative">
-	<button on:click={handleClick} class="rounded-full py-2 btns">
-		<svg
-			fill="#D1D5DB"
-			width="60"
-			height="40"
-			version="1.1"
-			id="lni_lni-user"
-			xmlns="http://www.w3.org/2000/svg"
-			xmlns:xlink="http://www.w3.org/1999/xlink"
-			x="0px"
-			y="0px"
-			viewBox="0 0 64 64"
-			style="enable-background:new 0 0 64 64;"
-			xml:space="preserve"
-		>
-			<g>
-				<path
-					d="M32,36.4c8.2,0,14.9-6.7,14.9-14.9S40.2,6.5,32,6.5s-14.9,6.7-14.9,14.9S23.8,36.4,32,36.4z M32,10
-                c6.3,0,11.4,5.1,11.4,11.4c0,6.3-5.1,11.4-11.4,11.4c-6.3,0-11.4-5.1-11.4-11.4C20.6,15.2,25.7,10,32,10z"
-					stroke="white"
-					stroke-width="0"
+<section id="profile" class="mt-2.5 relative right top-0">
+	<Button on:message>
+		<svelte:fragment slot="btn">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2 24 24" width="60" fill="#D1D5DB"
+				><path
+					d="M10 20C4.477 20 0 15.523 0 10S4.477 0 10 0s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm0-14a4 4 0 0 1 4 4v2a4 4 0 1 1-8 0V8a4 4 0 0 1 4-4zm0 2a2 2 0 0 0-2 2v2a2 2 0 1 0 4 0V8a2 2 0 0 0-2-2zM5.91 16.876a8.033 8.033 0 0 1-1.58-1.232 5.57 5.57 0 0 1 2.204-1.574 1 1 0 1 1 .733 1.86c-.532.21-.993.538-1.358.946zm8.144.022a3.652 3.652 0 0 0-1.41-.964 1 1 0 1 1 .712-1.868 5.65 5.65 0 0 1 2.284 1.607 8.032 8.032 0 0 1-1.586 1.225z"
 				/>
-				<path
-					d="M62.1,54.4c-8.3-7.1-19-11-30.1-11s-21.8,3.9-30.1,11C1.1,55,1,56.1,1.7,56.9c0.6,0.7,1.7,0.8,2.5,0.2
-                c7.7-6.5,17.6-10.1,27.9-10.1s20.2,3.6,27.9,10.1c0.3,0.3,0.7,0.4,1.1,0.4c0.5,0,1-0.2,1.3-0.6C63,56.1,62.9,55,62.1,54.4z"
-					stroke="white"
-					stroke-width="0"
-				/>
-			</g>
-		</svg>
-	</button>
+			</svg>
+		</svelte:fragment>
+	</Button>
 </section>
 
 {#if clicked}
@@ -57,6 +32,9 @@
 {/if}
 
 <style>
+	#profile {
+		grid-area: profile;
+	}
 	#submenu {
 		background-color: rgba(0, 0, 0, 0.5);
 	}

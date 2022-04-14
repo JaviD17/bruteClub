@@ -2,7 +2,7 @@
 
 <style>
     footer {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5));
+		background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.25));
         grid-area: footer;
     }
 </style>

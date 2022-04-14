@@ -7,7 +7,7 @@
 
 @layer components {
 	.btns {
-		@apply hover:bg-gray-700 hover:outline outline-offset-2 outline-purple-700;
+		@apply hover:bg-gray-600 hover:outline outline-offset-4 outline-purple-600;
 	}
 }
 

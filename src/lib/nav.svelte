@@ -1,5 +1,6 @@
 <script>
-	import Profile from '$lib/profile.svelte';
+	// import Profile from '$lib/profile.svelte';
+	import Button from '$lib/button/button.svelte';
 
 	let links = [
 		{ name: 'Blog', href: '/blogs' },
@@ -7,13 +8,14 @@
 		{ name: 'About', href: '/about' },
 		{ name: 'Coaches', href: '/coaches' }
 	];
+
+
 </script>
 
-<nav>
-	<Profile />
+<nav class="grid auto-rows-auto mt-14 text-2xl">
 	{#each links as link}
-		<div class="text-left mx-3 mb-6 btns rounded-lg">
-			<a class="rounded-lg p-1" href={link.href}>{link.name}</a>
-		</div>
+		<Button on:message>
+			<a slot="btn" href={link.href}>{link.name}</a>
+		</Button>
 	{/each}
 </nav>
