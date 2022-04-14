@@ -6,9 +6,7 @@
 @tailwind utilities;
 
 @layer components {
-	.btns {
-		@apply hover:bg-gray-600 hover:outline outline-offset-4 outline-purple-600;
-	}
+
 }
 
 body {
