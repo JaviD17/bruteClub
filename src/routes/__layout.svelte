@@ -1,8 +1,8 @@
 <script>
 	import '../app.css';
-	import Footer from '$lib/footer.svelte';
-	import Header from '$lib/header.svelte';
-	import Profile from '$lib/profile.svelte';
+	import Footer from '$lib/layout/footer.svelte';
+	import Header from '$lib/layout/header.svelte';
+	import Profile from '$lib/layout/profile.svelte';
 
 	function handleMessage(event) {
 		alert(event.detail.text);

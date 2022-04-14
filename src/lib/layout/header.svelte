@@ -1,6 +1,6 @@
 <script>
-	import Logo from '$lib/logo.svelte';
-	import Nav from '$lib/nav.svelte';
+	import Logo from '$lib/layout/logo.svelte';
+	import Nav from '$lib/layout/nav.svelte';
 </script>
 
 <header class="text-xl">

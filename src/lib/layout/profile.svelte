@@ -7,10 +7,15 @@
 		{ name: 'Subscriptions', href: '/profile/subscriptions' },
 		{ name: 'Settings', href: '/profile/settings' }
 	];
+
+	function handleClick() {
+		alert('yo')
+		clicked = !clicked;
+	}
 </script>
 
 <section id="profile" class="grid self-start relative right top-0">
-	<Button on:message>
+	<Button on:message on:click={handleClick}>
 		<svelte:fragment slot="btn">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2 24 24" width="50" fill="currentColor"
 				><path
