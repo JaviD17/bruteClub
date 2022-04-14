@@ -5,17 +5,17 @@
 	let links = [
 		{ name: 'Profile', href: '/profile' },
 		{ name: 'Subscriptions', href: '/profile/subscriptions' },
-		{ name: 'Settings', href: '/profile/settings' }
+		{ name: 'Settings', href: '/profile/pro-settings' }
 	];
 
-	function handleClick() {
-		alert('yo')
-		clicked = !clicked;
-	}
+	// function handleClick() {
+	// 	alert('yo')
+	// 	clicked = true;
+	// }
 </script>
 
 <section id="profile" class="grid self-start relative right top-0">
-	<Button on:message on:click={handleClick}>
+	<Button on:message>
 		<svelte:fragment slot="btn">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2 24 24" width="50" fill="currentColor"
 				><path
@@ -26,7 +26,7 @@
 	</Button>
 </section>
 
-{#if clicked}
+<!-- {#if clicked}
 	<section id="submenu" class="absolute top-0 ml-36 mt-24 rounded-lg">
 		{#each links as link}
 			<div class="rounded m-2 btns text-lg">
@@ -34,7 +34,7 @@
 			</div>
 		{/each}
 	</section>
-{/if}
+{/if} -->
 
 <style>
 	#profile {
