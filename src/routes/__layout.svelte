@@ -26,7 +26,7 @@
 	#container {
 		background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url('./hero.jpg');
 		display: grid;
-		grid-template-columns: 150px 1fr 90px;
+		grid-template-columns: 140px 1fr 80px;
 		grid-template-rows: 1fr 50px;
 		grid-template-areas: 
 		"header main profile"
