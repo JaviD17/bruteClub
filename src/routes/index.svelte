@@ -20,7 +20,7 @@
 
 <section id="hero" class="ml-14 pt-14">
 	<div class="m-40">
-		<h1 class="text-center font-bold">Your Darkness is your Development</h1>
+		<h1 class="text-center font-bold text-6xl">Your Darkness is your Development</h1>
 		<!-- <Button on:message={handleMessage}>
 			<p slot="btn">Click Me</p>
 		</Button> -->
