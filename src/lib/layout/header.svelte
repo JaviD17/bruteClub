@@ -1,11 +1,15 @@
 <script>
 	import Logo from '$lib/layout/logo.svelte';
 	import Nav from '$lib/layout/nav.svelte';
+
+	// function handleClick(e) {
+	// 	console.log(e.path);
+	// }
 </script>
 
-<header class="text-xl">
+<header>
 	<Logo />
-	<Nav on:message/>
+	<Nav on:click />
 </header>
 
 <style>

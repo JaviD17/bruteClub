@@ -4,15 +4,14 @@
 	import Header from '$lib/layout/header.svelte';
 	import Profile from '$lib/layout/profile.svelte';
 
-	function handleMessage(event, args) {
-		// alert(event.detail.text);
-		console.log(event, args);
+	function handleMessage(event) {
+		console.log(event);
 	}
 </script>
 
 <section id="container" class="w-full h-full bg-cover">
 	<Profile />
-	<Header on:message={handleMessage}/>
+	<Header on:click={handleMessage}/>
 
 	<main id="main">
 		<slot />
