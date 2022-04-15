@@ -65,11 +65,11 @@
 </script>
 
 <nav class="grid auto-rows-auto mt-14 text-2xl">
-	{#each links as link}
-		<Button on:click>
+	{#each links as {href, name, svg}}
+		<Button on:message>
 			<svelte:fragment slot="header">
-				<a href={link.href}>{link.name}</a>
-				{@html link.svg}
+				<a href={href}>{name}</a>
+				{@html svg}
 			</svelte:fragment>
 		</Button>
 	{/each}

@@ -1,7 +1,6 @@
 <script>
 	import Button from '$lib/button/button.svelte';
 
-	let clicked = false;
 	let hovering;
 
 	let links = [
@@ -20,7 +19,7 @@
 
 <section on:mouseenter={enter} on:mouseleave={leave} id="profile" class="grid self-start">
 	<!-- second on:click is a shorthand to forward events -->
-	<Button on:click>
+	<Button on:message>
 		<svelte:fragment slot="header">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2 24 24" width="50" fill="currentColor"
 				><path
@@ -33,7 +32,7 @@
 	{#if hovering}
 		<section id="submenu" class="absolute right right-0 mt-20 mr-4 rounded-lg grid">
 			{#each links as link}
-				<Button on:click>
+				<Button on:message>
 					<a slot="header" class="mx-2" href={link.href}>{link.name}</a>
 				</Button>
 			{/each}

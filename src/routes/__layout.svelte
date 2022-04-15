@@ -5,14 +5,14 @@
 	import Profile from '$lib/layout/profile.svelte';
 
 	function handleMessage(event, args) {
-		// alert('clicked');
-		// console.log(event, args);
+		// alert(event.detail.text);
+		console.log(event, args);
 	}
 </script>
 
 <section id="container" class="w-full h-full bg-cover">
 	<Profile />
-	<Header />
+	<Header on:message={handleMessage}/>
 
 	<main id="main">
 		<slot />
