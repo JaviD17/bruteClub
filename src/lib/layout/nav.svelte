@@ -1,5 +1,4 @@
 <script>
-	// import Profile from '$lib/profile.svelte';
 	import Button from '$lib/button/button.svelte';
 
 	let links = [
@@ -67,8 +66,8 @@
 
 <nav class="grid auto-rows-auto mt-14 text-2xl">
 	{#each links as link}
-		<Button on:message>
-			<svelte:fragment slot="btn">
+		<Button on:click>
+			<svelte:fragment slot="header">
 				<a href={link.href}>{link.name}</a>
 				{@html link.svg}
 			</svelte:fragment>

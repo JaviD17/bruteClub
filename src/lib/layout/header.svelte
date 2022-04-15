@@ -5,7 +5,7 @@
 
 <header class="text-xl">
 	<Logo />
-	<Nav on:message />
+	<Nav on:click />
 </header>
 
 <style>

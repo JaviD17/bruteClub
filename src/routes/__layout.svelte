@@ -4,23 +4,22 @@
 	import Header from '$lib/layout/header.svelte';
 	import Profile from '$lib/layout/profile.svelte';
 
-	function handleMessage(event) {
-		alert(event.detail.text);
+	function handleMessage(event, args) {
+		// alert('clicked');
+		// console.log(event, args);
 	}
 </script>
 
 <section id="container" class="w-full h-full bg-cover">
-	<Profile on:message={handleMessage} />
-	<Header on:message={handleMessage}/>
+	<Profile on:click={handleMessage} />
+	<Header on:click={handleMessage} />
 
 	<main id="main">
 		<slot />
 	</main>
 
 	<Footer />
-
 </section>
-
 
 <style>
 	#container {
@@ -28,9 +27,9 @@
 		display: grid;
 		grid-template-columns: 140px 1fr 80px;
 		grid-template-rows: 1fr 50px;
-		grid-template-areas: 
-		"header main profile"
-		"footer footer footer";
+		grid-template-areas:
+			'header main profile'
+			'footer footer footer';
 	}
 
 	#main {
