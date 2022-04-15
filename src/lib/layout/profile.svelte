@@ -12,7 +12,7 @@
 
 	function handleMessage(event) {
 		console.log(event);
-	}``
+	}
 </script>
 
 <section on:mouseenter={enter} on:mouseleave={leave} id="profile" class="grid self-start">
