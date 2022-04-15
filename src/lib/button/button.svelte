@@ -6,7 +6,7 @@
 	function handleClick() {
 		dispatch('message', {
 			text: 'clicked',
-			isTrusted: true
+			clicked: true
 		});
 	}
 </script>
