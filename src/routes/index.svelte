@@ -1,5 +1,4 @@
 <script>
-	import Card from '$lib/card.svelte';
 	import Button from '$lib/button/button.svelte';
 	export const title = 'Brute Club';
 

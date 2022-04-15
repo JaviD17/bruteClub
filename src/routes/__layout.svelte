@@ -11,8 +11,8 @@
 </script>
 
 <section id="container" class="w-full h-full bg-cover">
-	<Profile on:click={handleMessage} />
-	<Header on:click={handleMessage} />
+	<Profile />
+	<Header />
 
 	<main id="main">
 		<slot />
