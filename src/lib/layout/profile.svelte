@@ -17,7 +17,7 @@
 
 <section on:mouseenter={enter} on:mouseleave={leave} id="profile" class="grid self-start">
 	<Button>
-		<p class="inline" slot="profile" let:proSvg>{@html proSvg}</p>
+		<p class="" slot="profile" let:proSvg>{@html proSvg}</p>
 	</Button>
 
 	{#if hovering}

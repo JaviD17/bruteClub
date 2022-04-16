@@ -1,14 +1,37 @@
 <script>
 	export const title = 'Brute Club';
-
 </script>
 
 <svelte:head>
 	<title>{title}</title>
 </svelte:head>
 
-<section id="hero" class="ml-14 pt-14">
-	<div class="grid m-40">
+<section id="blog" class="bg-gray-200">
+	<!-- <div class="bg-gray-200 grid m-40">
 		<h1 class="text-center text-6xl">Your Darkness is your Development</h1>
-	</div>
+	</div> -->
 </section>
+
+<section id="guides" class="bg-gray-400">
+	<!-- <div class="bg-gray-200 grid m-40">
+		<h1 class="text-center text-6xl">Your Darkness is your Development</h1>
+	</div> -->
+</section>
+
+<section id="featured" class="bg-gray-900">
+	<!-- <div class="bg-gray-200 grid m-40">
+		<h1 class="text-center text-6xl">Your Darkness is your Development</h1>
+	</div> -->
+</section>
+
+<style>
+	#blog {
+		grid-area: blog;
+	}
+	#guides {
+		grid-area: guides;
+	}
+	#featured {
+		grid-area: featured;
+	}
+</style>

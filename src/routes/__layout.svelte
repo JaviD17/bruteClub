@@ -11,7 +11,7 @@
 
 <section id="container" class="w-full h-full bg-cover">
 	<Profile />
-	<Header on:click={handleMessage}/>
+	<Header on:click={handleMessage} />
 
 	<main id="main">
 		<slot />
@@ -21,6 +21,15 @@
 </section>
 
 <style>
+	#main {
+		background-color: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5));
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 65% 1fr;
+		grid-template-areas: 
+			'blog guides'
+			'featured featured';
+	}
 	#container {
 		background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url('./hero.jpg');
 		display: grid;
