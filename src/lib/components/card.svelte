@@ -11,7 +11,7 @@
 </script>
 
 <section id="card" class="w-full h-full p-8">
-	<div id="inner-card" class="bg-black/40 p-px rounded-lg">
+	<div id="inner-card" class="bg-black/40 p-px rounded-lg text-center">
 		{#if $$slots.info}
 			{#each newBlog as { title, date, author }}
 				<h2 class="m-4">{title}</h2>
