@@ -10,21 +10,22 @@
 	];
 </script>
 
-<section id="card" class="w-full h-full">
-	{#if $$slots.info}
-		{#each newBlog as {title, date, author}}
-            <h2>{title}</h2>
-			<slot name="info" {date} />
-            <p>{author}</p>
-		{/each}
-	{/if}
-	<!-- <h2>hey</h2>
-    <p>Date</p>
-    <p>Author</p> -->
+<section id="card" class="w-full h-full p-8">
+	<div id="inner-card" class="bg-black/40 p-px rounded-lg">
+		{#if $$slots.info}
+			{#each newBlog as { title, date, author }}
+				<h2 class="m-4">{title}</h2>
+				<slot name="info" {date} />
+				<p class="m-4">{author}</p>
+			{/each}
+		{/if}
+	</div>
 </section>
 
 <style>
-	#card {
-		background-color: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5));
+	#inner-card {
+		/* background-color: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)); */
+        height: 24rem;
+        width: 35rem;
 	}
 </style>
