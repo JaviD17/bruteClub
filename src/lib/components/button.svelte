@@ -1,16 +1,4 @@
 <script>
-	// import { createEventDispatcher } from 'svelte';
-
-	// const dispatch = createEventDispatcher();
-
-	// function handleClick(e, name) {
-	// 	btnVal = name;
-	// 	dispatch('message', {
-	// 		clicked: true
-	// 	});
-	// 	console.log({btnVal});
-	// }
-
 	let navLinks = [
 		{
 			name: 'Blog',

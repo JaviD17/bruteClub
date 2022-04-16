@@ -22,7 +22,7 @@
 
 <style>
 	#main {
-		background-color: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5));
+		/* background-color: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)); */
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 65% 1fr;
