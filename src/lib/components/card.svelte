@@ -8,7 +8,7 @@
 	];
 </script>
 
-<a id="inner-card-a" href="./blogs" class="bg-black/25 my-2 rounded-lg overflow-hidden">
+<a id="inner-card-a" href="./blogs" class="bg-black/70 my-2 rounded-lg overflow-hidden">
 	{#if $$slots.info}
 		{#each newBlog as { title, date, author }}
 			<div id="card-img">
