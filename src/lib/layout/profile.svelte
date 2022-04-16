@@ -17,11 +17,11 @@
 
 <section on:mouseenter={enter} on:mouseleave={leave} id="profile" class="grid self-start">
 	<Button>
-		<p class="" slot="profile" let:proSvg>{@html proSvg}</p>
+		<svelte:fragment slot="profile" let:proSvg>{@html proSvg}</svelte:fragment>>
 	</Button>
 
 	{#if hovering}
-		<section id="submenu" class="absolute right right-0 mt-20 mr-4 rounded-lg grid">
+		<section id="submenu" class="absolute right right-0 mt-24 mr-4 rounded-lg grid">
 			<Button on:click={handleMessage} let:proName>
 				<p slot="profileLinks" class="inline">{proName}</p>
 			</Button>

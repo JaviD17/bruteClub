@@ -7,11 +7,12 @@
 	<title>{title}</title>
 </svelte:head>
 
-<section id="blog" class="">
+<section id="blog" class="grid grid-rows-2 m-8">
 	<!-- <div class="bg-gray-200 grid m-40">
 		<h1 class="text-center text-6xl">Your Darkness is your Development</h1>
 	</div> -->
-	<Card let:date><p slot="info" class="m-4">{date}</p></Card>
+	<Card let:date><p slot="info">{date}</p></Card>
+	<Card let:date><p slot="info">{date}</p></Card>
 </section>
 
 <section id="guides" class="bg-gray-400">
@@ -20,7 +21,7 @@
 	</div> -->
 </section>
 
-<section id="featured" class="bg-gray-900">
+<section id="featured" class="bg-gray-900/50">
 	<!-- <div class="bg-gray-200 grid m-40">
 		<h1 class="text-center text-6xl">Your Darkness is your Development</h1>
 	</div> -->

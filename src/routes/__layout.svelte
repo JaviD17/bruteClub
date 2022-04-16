@@ -9,7 +9,7 @@
 	}
 </script>
 
-<section id="container" class="w-full h-full bg-cover">
+<section id="container">
 	<Profile />
 	<Header on:click={handleMessage} />
 
@@ -25,15 +25,14 @@
 		/* background-color: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)); */
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 65% 1fr;
-		grid-template-areas: 
+		grid-template-rows: 7fr 3fr;
+		grid-template-areas:
 			'blog guides'
 			'featured featured';
 	}
 	#container {
-		background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url('./hero.jpg');
 		display: grid;
-		grid-template-columns: 140px 1fr 80px;
+		grid-template-columns: 2fr 18fr 1fr;
 		grid-template-rows: 1fr 50px;
 		grid-template-areas:
 			'header main profile'

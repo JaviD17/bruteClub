@@ -1,6 +1,4 @@
 <script>
-	import Button from '$lib/components/button.svelte';
-
 	let newBlog = [
 		{
 			title: 'First Blog',
@@ -10,35 +8,52 @@
 	];
 </script>
 
-<section id="card" class="w-full h-full p-8">
-	<a href="./blogs">
-		<div id="inner-card" class="bg-black/25 p-px rounded-lg text-center h-48 w-48">
-			{#if $$slots.info}
-				{#each newBlog as { title, date, author }}
-					<div class="p-4">
-						<img
-							src="./blog1.jpg"
-							alt="man prepping food"
-							class="rounded-lg h-36 object-cover object-right-bottom"
-							id="card-img"
-						/>
-					</div>
-					<h2 class="m-4">{title}</h2>
+<a id="inner-card-a" href="./blogs" class="bg-black/25 my-2 rounded-lg overflow-hidden">
+	{#if $$slots.info}
+		{#each newBlog as { title, date, author }}
+			<div id="card-img">
+				<img
+					src="./blog1.jpg"
+					alt="man prepping food"
+					class="rounded-lg object-cover object-center h-full"
+					id="card-img"
+				/>
+			</div>
+			<div id="card-details" class="text-xs m-4">
+				<div id="details-content" class="">
+                    <p>content inside</p>
+                </div>
+				<div id="details-by">
+					<h2 class="text-sm">{title}</h2>
 					<slot name="info" {date} />
-					<p class="m-4">{author}</p>
-				{/each}
-			{/if}
-		</div>
-	</a>
-</section>
+					<p>{author}</p>
+				</div>
+			</div>
+		{/each}
+	{/if}
+</a>
 
 <style>
-	#inner-card {
-		/* background-color: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)); */
-		height: 24rem;
-		width: 35rem;
-	}
 	#card-img {
-		width: 34rem;
+		grid-area: 'card-img';
+	}
+    #details-content {
+        grid-area: 'details-content';
+    }
+    #details-by {
+        grid-area: 'details-by';
+    }
+	#card-details {
+		grid-area: 'card-details';
+        display: grid;
+        grid-template-rows: 2fr 1fr;
+        grid-template-areas: 
+        'details-content'
+        'details-by';
+	}
+	#inner-card-a {
+		display: grid;
+		grid-template-columns: 1fr 3fr;
+		grid-template-areas: 'card-img card-content';
 	}
 </style>
