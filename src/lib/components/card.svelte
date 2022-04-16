@@ -11,16 +11,25 @@
 </script>
 
 <section id="card" class="w-full h-full p-8">
-	<div id="inner-card" class="bg-black/25 p-px rounded-lg text-center h-48 w-48">
-		{#if $$slots.info}
-			{#each newBlog as { title, date, author }}
-				<div class="p-4"><img src="./blog1.jpg" alt="man prepping food" class="rounded-lg h-36 object-cover object-right-bottom" id="card-img"/></div>
-				<h2 class="m-4">{title}</h2>
-				<slot name="info" {date} />
-				<p class="m-4">{author}</p>
-			{/each}
-		{/if}
-	</div>
+	<a href="./blogs">
+		<div id="inner-card" class="bg-black/25 p-px rounded-lg text-center h-48 w-48">
+			{#if $$slots.info}
+				{#each newBlog as { title, date, author }}
+					<div class="p-4">
+						<img
+							src="./blog1.jpg"
+							alt="man prepping food"
+							class="rounded-lg h-36 object-cover object-right-bottom"
+							id="card-img"
+						/>
+					</div>
+					<h2 class="m-4">{title}</h2>
+					<slot name="info" {date} />
+					<p class="m-4">{author}</p>
+				{/each}
+			{/if}
+		</div>
+	</a>
 </section>
 
 <style>
@@ -29,7 +38,7 @@
 		height: 24rem;
 		width: 35rem;
 	}
-    #card-img {
-        width: 34rem;
-    }
+	#card-img {
+		width: 34rem;
+	}
 </style>
