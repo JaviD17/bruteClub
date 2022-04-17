@@ -72,15 +72,20 @@
 						d="M10 20C4.477 20 0 15.523 0 10S4.477 0 10 0s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm0-14a4 4 0 0 1 4 4v2a4 4 0 1 1-8 0V8a4 4 0 0 1 4-4zm0 2a2 2 0 0 0-2 2v2a2 2 0 1 0 4 0V8a2 2 0 0 0-2-2zM5.91 16.876a8.033 8.033 0 0 1-1.58-1.232 5.57 5.57 0 0 1 2.204-1.574 1 1 0 1 1 .733 1.86c-.532.21-.993.538-1.358.946zm8.144.022a3.652 3.652 0 0 0-1.41-.964 1 1 0 1 1 .712-1.868 5.65 5.65 0 0 1 2.284 1.607 8.032 8.032 0 0 1-1.586 1.225z"
 					/>
 				</svg>`;
+
+	let blog = {
+		name: 'Go to Article',
+		href: './blogs'
+	};
 </script>
 
 {#if $$slots.navLinks}
 	{#each navLinks as { name, href, svg }}
-		<button on:click class="grid">
-			<a
-				{href}
-				class="text-xl font-bold bg-gray-900/20 hover:bg-gray-100/75 p-2 m-2 rounded-full ease-in-out duration-400 hover:outline outline-offset-2 outline-2 outline-cyan-300 hover:text-gray-900"
-			>
+		<button
+			on:click
+			class="grid text-xl font-bold bg-gray-900/20 hover:bg-gray-100/75 p-2 m-2 rounded-full ease-in-out duration-400 hover:outline outline-offset-2 outline-2 outline-cyan-300 hover:text-gray-900"
+		>
+			<a {href}>
 				<slot name="navLinks" navName={name} />
 				{@html svg}
 			</a>
@@ -99,13 +104,24 @@
 
 {#if $$slots.profileLinks}
 	{#each profileLinks as { name, href }}
-		<button on:click class="grid">
-			<a
-				{href}
-				class="text-xl font-bold bg-gray-900/20 hover:bg-gray-100/75 p-2 m-2 rounded-full ease-in-out duration-400 hover:outline outline-offset-2 outline-2 outline-cyan-300 hover:text-gray-900"
-			>
+		<button
+			on:click
+			class="grid text-xl font-bold bg-gray-900/20 hover:bg-gray-100/75 p-2 m-2 rounded-full ease-in-out duration-400 hover:outline outline-offset-2 outline-2 outline-cyan-300 hover:text-gray-900"
+		>
+			<a {href}>
 				<slot name="profileLinks" proName={name} />
 			</a>
 		</button>
 	{/each}
+{/if}
+
+{#if $$slots.blog}
+	<button
+		on:click
+		class="justify-self-start text-xl font-bold bg-gray-900/20 hover:bg-gray-100/75 p-2 m-2 rounded-full ease-in-out duration-400 hover:outline outline-offset-2 outline-2 outline-cyan-300 hover:text-gray-900"
+	>
+		<a href={blog.href}>
+			<slot name="blog" blogName={blog.name} />
+		</a>
+	</button>
 {/if}

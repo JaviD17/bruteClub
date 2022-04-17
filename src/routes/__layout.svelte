@@ -26,8 +26,9 @@
 		display: grid;
 		grid-gap: 1rem;
 		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 1fr 1fr;
+		grid-template-rows: 200px 1fr 1fr;
 		grid-template-areas:
+			'title title'
 			'featured featured'
 			'blog guides';
 		/* grid-template-areas:
@@ -41,7 +42,7 @@
 		grid-template-rows: 1fr 50px;
 		grid-template-areas:
 			'header main profile'
-			'header footer footer';
+			'footer footer footer';
 	}
 
 	#main {

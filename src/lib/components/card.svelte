@@ -1,4 +1,5 @@
 <script>
+    import Button from "$lib/components/button.svelte";
 	let newBlog = [
 		{
 			title: 'How to Cut',
@@ -35,12 +36,16 @@
 					<slot name="info" {date} />
 					<p class="">By: {author}</p>
 				</div>
+                <Button on:click><p id="button" class="inline" slot="blog" let:blogName>{blogName}</p></Button>
 			</div>
 		</a>
 	{/each}
 {/if}
 
 <style>
+    #button {
+        grid-area: 'button';
+    }
 	#card-img {
 		grid-area: 'card-img';
 	}
@@ -53,10 +58,11 @@
 	#card-details {
 		grid-area: 'card-details';
 		display: grid;
-		grid-template-rows: 1fr 1fr;
+		grid-template-rows: 1fr 1.5fr 0.5fr;
 		grid-template-areas:
 			'details-content'
-			'details-by';
+			'details-by'
+            'button';
 	}
 	#inner-card-a {
 		display: grid;

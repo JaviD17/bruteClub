@@ -7,6 +7,10 @@
 	<title>{title}</title>
 </svelte:head>
 
+<section id="title" class="text-6xl text-center m-12 font-bold">
+	<h1 class="text-gray-200">Your Darkness is your Development</h1>
+</section>
+
 <section id="blog" class="">
 	<!-- <div class="bg-gray-200 grid m-40">
 		<h1 class="text-center text-6xl">Your Darkness is your Development</h1>
@@ -31,6 +35,9 @@
 </section>
 
 <style>
+	#title {
+		grid-area: title;
+	}
 	#blog {
 		grid-area: blog;
 	}
