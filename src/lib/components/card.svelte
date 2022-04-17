@@ -17,7 +17,7 @@
 
 {#if $$slots.info}
 	{#each newBlog as { title, date, author, summary }}
-		<a id="inner-card-a" href="./blogs" class="bg-black/70 my-5 rounded-lg overflow-hidden">
+		<a id="inner-card-a" href="./blogs" class="bg-black/70 m-4 rounded-lg overflow-hidden">
 			<div id="card-img">
 				<img
 					src="./blog1.jpg"
@@ -26,14 +26,14 @@
 					id="card-img"
 				/>
 			</div>
-			<div id="card-details" class="text-sm m-4">
-				<div id="details-content" class="mt-2">
+			<div id="card-details" class="text-base m-4">
+				<div id="details-content" class="p-px">
 					<p>{summary}</p>
 				</div>
-				<div id="details-by">
-					<h2 class="text-2xl">{title}</h2>
+				<div id="details-by" class="p-px border-t-2 border-gray-100">
+					<h2 class="text-3xl text-cyan-300">{title}</h2>
 					<slot name="info" {date} />
-					<p>By: {author}</p>
+					<p class="">By: {author}</p>
 				</div>
 			</div>
 		</a>
@@ -53,7 +53,7 @@
 	#card-details {
 		grid-area: 'card-details';
 		display: grid;
-		grid-template-rows: 1.5fr 0.5fr;
+		grid-template-rows: 1fr 1fr;
 		grid-template-areas:
 			'details-content'
 			'details-by';

@@ -10,6 +10,7 @@
 }
 
 body {
-	/* background-color: #000; */
+	background-color: #404040;
 	background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url('./hero.jpg');
+	background-attachment: fixed;
 }

@@ -24,19 +24,24 @@
 	#main {
 		/* background-color: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)); */
 		display: grid;
+		grid-gap: 1rem;
 		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 7fr 3fr;
+		grid-template-rows: 1fr 1fr;
 		grid-template-areas:
+			'featured featured'
+			'blog guides';
+		/* grid-template-areas:
 			'blog guides'
-			'featured featured';
+			'featured featured'; */
 	}
 	#container {
 		display: grid;
+		grid-gap: 1rem;
 		grid-template-columns: 2fr 18fr 1fr;
 		grid-template-rows: 1fr 50px;
 		grid-template-areas:
 			'header main profile'
-			'footer footer footer';
+			'header footer footer';
 	}
 
 	#main {
