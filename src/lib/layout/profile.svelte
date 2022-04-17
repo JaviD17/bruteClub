@@ -21,7 +21,7 @@
 	</Button>
 
 	{#if hovering}
-		<section id="submenu" class="absolute right right-0 mt-24 mr-4 rounded-lg grid">
+		<section id="submenu" class="bg-black/70 absolute right-20 top-4 rounded-lg grid">
 			<Button on:click={handleMessage} let:proName>
 				<p slot="profileLinks" class="inline">{proName}</p>
 			</Button>
@@ -34,6 +34,6 @@
 		grid-area: profile;
 	}
 	#submenu {
-		background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.25));
+		/* background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.6)); */
 	}
 </style>

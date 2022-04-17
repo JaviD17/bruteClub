@@ -91,7 +91,7 @@
 {#if $$slots.profile}
 	<button
 		on:click
-		class="place-content-center grid font-bold bg-gray-900/20 hover:bg-gray-100/75 m-3 rounded-full ease-in-out duration-400 hover:outline outline-offset-2 outline-2 outline-cyan-300 hover:text-gray-900"
+		class="font-bold bg-gray-900/20 hover:bg-gray-100/75 mt-1.5 mr-1.5 rounded-full ease-in-out duration-400 hover:outline outline-offset-2 outline-2 outline-cyan-300 hover:text-gray-900"
 	>
 		<slot name="profile" {proSvg} />
 	</button>
