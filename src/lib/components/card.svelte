@@ -1,16 +1,23 @@
 <script>
 	let newBlog = [
 		{
-			title: 'First Blog',
+			title: 'How to Cut',
 			date: 'April 15th, 2022',
-			author: 'Javier Dominguez II'
+			author: 'Javier Dominguez II',
+            summary: 'Using science is the most effective way to cut in 2022. Click this to learn!'
+		},
+		{
+			title: 'How to Maintain',
+			date: 'April 16th, 2022',
+			author: 'Javier Dominguez II',
+            summary: 'Using science is the most effective way to maintain in 2022. Click this to learn!'
 		}
 	];
 </script>
 
-<a id="inner-card-a" href="./blogs" class="bg-black/70 my-2 rounded-lg overflow-hidden">
-	{#if $$slots.info}
-		{#each newBlog as { title, date, author }}
+{#if $$slots.info}
+	{#each newBlog as { title, date, author, summary }}
+		<a id="inner-card-a" href="./blogs" class="bg-black/70 my-5 rounded-lg overflow-hidden">
 			<div id="card-img">
 				<img
 					src="./blog1.jpg"
@@ -19,37 +26,37 @@
 					id="card-img"
 				/>
 			</div>
-			<div id="card-details" class="text-xs m-4">
-				<div id="details-content" class="">
-                    <p>content inside</p>
-                </div>
+			<div id="card-details" class="text-sm m-4">
+				<div id="details-content" class="mt-2">
+					<p>{summary}</p>
+				</div>
 				<div id="details-by">
-					<h2 class="text-sm">{title}</h2>
+					<h2 class="text-2xl">{title}</h2>
 					<slot name="info" {date} />
-					<p>{author}</p>
+					<p>By: {author}</p>
 				</div>
 			</div>
-		{/each}
-	{/if}
-</a>
+		</a>
+	{/each}
+{/if}
 
 <style>
 	#card-img {
 		grid-area: 'card-img';
 	}
-    #details-content {
-        grid-area: 'details-content';
-    }
-    #details-by {
-        grid-area: 'details-by';
-    }
+	#details-content {
+		grid-area: 'details-content';
+	}
+	#details-by {
+		grid-area: 'details-by';
+	}
 	#card-details {
 		grid-area: 'card-details';
-        display: grid;
-        grid-template-rows: 2fr 1fr;
-        grid-template-areas: 
-        'details-content'
-        'details-by';
+		display: grid;
+		grid-template-rows: 1.5fr 0.5fr;
+		grid-template-areas:
+			'details-content'
+			'details-by';
 	}
 	#inner-card-a {
 		display: grid;
