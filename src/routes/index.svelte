@@ -1,14 +1,17 @@
 <script>
 	import Card from '$lib/components/card.svelte';
 	export const title = 'Brute Club';
+	import Button from '$lib/components/button.svelte';
 </script>
 
 <svelte:head>
 	<title>{title}</title>
 </svelte:head>
 
-<section id="title" class="text-6xl text-center m-12 font-bold">
-	<h1 class="text-gray-200">Your Darkness is your Development</h1>
+<section id="title" class="grid content-center text-6xl text-center mx-4 p-4 mt-16 text-gray-200 bg-black/70 rounded-lg">
+	<h1 class="font-bold">Brute Club</h1>
+	<p class="text-xl">Your Darkness is Your Development</p>
+	<Button><p slot="calcs" let:calcName>{calcName}</p></Button>
 </section>
 
 <section id="blog" class="">

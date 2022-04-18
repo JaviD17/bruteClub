@@ -26,7 +26,7 @@
 		display: grid;
 		grid-gap: 1rem;
 		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 200px 1fr 1fr;
+		grid-template-rows: 0.5fr 1fr 1fr;
 		grid-template-areas:
 			'title title'
 			'featured featured'

@@ -27,12 +27,12 @@
 					id="card-img"
 				/>
 			</div>
-			<div id="card-details" class="text-base m-4">
-				<div id="details-content" class="p-px">
+			<div id="card-details" class="text-base">
+				<div id="details-content" class="p-px mx-6 mt-4">
 					<p>{summary}</p>
 				</div>
-				<div id="details-by" class="p-px border-t-2 border-gray-100">
-					<h2 class="text-3xl text-cyan-300">{title}</h2>
+				<div id="details-by" class="mx-6 border-t-2 border-gray-100">
+					<h2 class="mt-2 text-3xl font-bold text-cyan-300">{title}</h2>
 					<slot name="info" {date} />
 					<p class="">By: {author}</p>
 				</div>
@@ -58,7 +58,7 @@
 	#card-details {
 		grid-area: 'card-details';
 		display: grid;
-		grid-template-rows: 1fr 1.5fr 0.5fr;
+		grid-template-rows: 1fr 1fr 0.5fr;
 		grid-template-areas:
 			'details-content'
 			'details-by'

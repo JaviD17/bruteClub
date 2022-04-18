@@ -74,8 +74,12 @@
 				</svg>`;
 
 	let blog = {
-		name: 'Go to Article',
+		name: 'Read Article',
 		href: './blogs'
+	};
+	let calcBtn = {
+		name: 'Calculate Your Freedom',
+		href: './calcs'
 	};
 </script>
 
@@ -118,10 +122,21 @@
 {#if $$slots.blog}
 	<button
 		on:click
-		class="justify-self-start text-xl font-bold bg-gray-900/20 hover:bg-gray-100/75 p-2 m-2 rounded-full ease-in-out duration-400 hover:outline outline-offset-2 outline-2 outline-cyan-300 hover:text-gray-900"
+		class="justify-self-start text-xl font-bold text-gray-900 bg-gray-100/60 hover:bg-gray-900/75 p-2 my-4 mx-6 rounded-full ease-in-out duration-400 hover:outline outline-offset-2 outline-2 outline-cyan-300 hover:text-gray-100"
 	>
 		<a href={blog.href}>
 			<slot name="blog" blogName={blog.name} />
+		</a>
+	</button>
+{/if}
+
+{#if $$slots.calcs}
+	<button
+		on:click
+		class="justify-self-center text-xl font-bold text-gray-900 bg-gray-100/60 hover:bg-gray-900/75 p-2 m-2 rounded-full ease-in-out duration-400 hover:outline outline-offset-2 outline-2 outline-cyan-300 hover:text-gray-100"
+	>
+		<a href={calcBtn.href}>
+			<slot name="calcs" calcName={calcBtn.name} />
 		</a>
 	</button>
 {/if}
