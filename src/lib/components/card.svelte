@@ -1,17 +1,17 @@
 <script>
-    import Button from "$lib/components/button.svelte";
+	import Button from '$lib/components/button.svelte';
 	let newBlog = [
 		{
 			title: 'How to Cut',
 			date: 'April 15th, 2022',
 			author: 'Javier Dominguez II',
-            summary: 'Using science is the most effective way to cut in 2022. Click this to learn!'
+			summary: 'Using science is the most effective way to cut in 2022. Click this to learn!'
 		},
 		{
 			title: 'How to Maintain',
 			date: 'April 16th, 2022',
 			author: 'Javier Dominguez II',
-            summary: 'Using science is the most effective way to maintain in 2022. Click this to learn!'
+			summary: 'Using science is the most effective way to maintain in 2022. Click this to learn!'
 		}
 	];
 </script>
@@ -36,16 +36,18 @@
 					<slot name="info" {date} />
 					<p class="">By: {author}</p>
 				</div>
-                <Button on:click><p id="button" class="inline" slot="blog" let:blogName>{blogName}</p></Button>
+				<Button on:click
+					><p id="button" class="inline" slot="blog" let:blogName>{blogName}</p></Button
+				>
 			</div>
 		</a>
 	{/each}
 {/if}
 
 <style>
-    #button {
-        grid-area: 'button';
-    }
+	#button {
+		grid-area: 'button';
+	}
 	#card-img {
 		grid-area: 'card-img';
 	}
@@ -62,11 +64,22 @@
 		grid-template-areas:
 			'details-content'
 			'details-by'
-            'button';
+			'button';
 	}
-	#inner-card-a {
-		display: grid;
-		grid-template-columns: 1fr 3fr;
-		grid-template-areas: 'card-img card-content';
+	/* @media (min-width: 0px) { */
+		#inner-card-a {
+			display: grid;
+			/* grid-template-rows: 0.5fr 1fr;
+			grid-template-areas: 
+            'card-img'
+            'card-content'; */
+		}
+	/* } */
+	@media (min-width: 768px) {
+		#inner-card-a {
+			display: grid;
+			grid-template-columns: 1fr 3fr;
+			grid-template-areas: 'card-img card-content';
+		}
 	}
 </style>

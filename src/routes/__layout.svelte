@@ -21,19 +21,21 @@
 </section>
 
 <style>
-	#main {
-		/* background-color: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)); */
-		display: grid;
-		grid-gap: 1rem;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 0.5fr 1fr 1fr;
-		grid-template-areas:
-			'title title'
-			'featured featured'
-			'blog guides';
-		/* grid-template-areas:
+	@media (min-width: 1280px) {
+		#main {
+			/* background-color: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)); */
+			display: grid;
+			grid-gap: 1rem;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 0.5fr 1fr 1fr;
+			grid-template-areas:
+				'title title'
+				'featured featured'
+				'blog guides';
+			/* grid-template-areas:
 			'blog guides'
 			'featured featured'; */
+		}
 	}
 	#container {
 		display: grid;
