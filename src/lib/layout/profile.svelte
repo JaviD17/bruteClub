@@ -33,7 +33,4 @@
 	#profile {
 		grid-area: profile;
 	}
-	#submenu {
-		/* background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.6)); */
-	}
 </style>
