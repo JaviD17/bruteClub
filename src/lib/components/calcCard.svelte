@@ -1,4 +1,5 @@
 <script>
+    import Button from "$lib/components/button.svelte";
     // All Calcs
     // Macro Calc
     // FFMI Calc
@@ -22,7 +23,7 @@
 </script>
 
 <section class="w-1/2 h-1/2 bg-black/50 m-4 rounded-lg">
-    <form id="form" class="p-4">
+    <form id="form" class="p-8">
         <div>
             <label for="gender">Gender</label><br />
             <input type="text" id="gender" name="gender" /><br />
