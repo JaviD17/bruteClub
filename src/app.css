@@ -6,7 +6,12 @@
 @tailwind utilities;
 
 @layer components {
-	
+	.input-btn {
+		@apply rounded-lg h-10 w-48 mb-4
+	}
+	.div-calc {
+		@apply my-px
+	}
 }
 
 body {

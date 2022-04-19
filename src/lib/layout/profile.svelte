@@ -15,9 +15,9 @@
 	}
 </script>
 
-<section on:mouseenter={enter} on:mouseleave={leave} id="profile" class="grid self-start">
+<section on:mouseenter={enter} on:mouseleave={leave} id="profileIcon" class="grid self-start">
 	<Button>
-		<svelte:fragment slot="profile" let:proSvg>{@html proSvg}</svelte:fragment>>
+		<svelte:fragment slot="profile" let:proSvg>{@html proSvg}</svelte:fragment>
 	</Button>
 
 	{#if hovering}
@@ -30,7 +30,7 @@
 </section>
 
 <style>
-	#profile {
+	#profileIcon {
 		grid-area: profile;
 	}
 </style>

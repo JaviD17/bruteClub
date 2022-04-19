@@ -77,11 +77,15 @@
 		name: 'Read Article',
 		href: './blogs'
 	};
+
 	let calcBtn = {
 		name: 'Calculate Your Freedom',
 		href: './calcs'
 	};
-	// let Calculate object
+	
+	let calculate = {
+		name: 'Calculate'
+	};
 </script>
 
 {#if $$slots.navLinks}
@@ -139,5 +143,14 @@
 		<a href={calcBtn.href}>
 			<slot name="calcs" calcName={calcBtn.name} />
 		</a>
+	</button>
+{/if}
+
+{#if $$slots.calculate}
+	<button
+		on:click
+		class="justify-self-center text-xl font-bold text-gray-900 bg-gray-100/60 hover:bg-gray-900/75 p-2 m-2 rounded-full ease-in-out duration-400 hover:outline outline-offset-2 outline-2 outline-cyan-300 hover:text-gray-100"
+	>
+		<slot name="calculate" calculate={calculate.name} />
 	</button>
 {/if}
