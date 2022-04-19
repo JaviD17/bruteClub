@@ -10,7 +10,13 @@
 </script>
 
 <section id="container">
-	<main>
+	<main id="main">
 		<slot />
 	</main>
 </section>
+
+<style>
+	#main {
+		display: block;
+	}
+</style>
