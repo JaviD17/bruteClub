@@ -66,15 +66,9 @@
 			'details-by'
 			'button';
 	}
-	/* @media (min-width: 0px) { */
-		#inner-card-a {
-			display: grid;
-			/* grid-template-rows: 0.5fr 1fr;
-			grid-template-areas: 
-            'card-img'
-            'card-content'; */
-		}
-	/* } */
+	#inner-card-a {
+		display: grid;
+	}
 	@media (min-width: 768px) {
 		#inner-card-a {
 			display: grid;

@@ -81,6 +81,7 @@
 		name: 'Calculate Your Freedom',
 		href: './calcs'
 	};
+	// let Calculate object
 </script>
 
 {#if $$slots.navLinks}

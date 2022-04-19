@@ -1,4 +1,12 @@
 <script>
+    // All Calcs
+    // Macro Calc
+    // FFMI Calc
+    // 1RM Calc
+    // Body fat chart
+
+
+
 	// conversion calculators
 
 	// lbs to kg
@@ -9,13 +17,41 @@
 	// input for gender
 	// input for weight (lbs)
 	// height ft
-	// height cm
+	// height in
 	// age
 </script>
 
-<form>
-	<label for="fname">First name:</label><br />
-	<input type="text" id="fname" name="fname" /><br />
-	<label for="lname">Last name:</label><br />
-	<input type="text" id="lname" name="lname" />
-</form>
+<section class="w-1/2 h-1/2 bg-black/50 m-4 rounded-lg">
+    <form id="form" class="p-4">
+        <div>
+            <label for="gender">Gender</label><br />
+            <input type="text" id="gender" name="gender" /><br />
+        </div>
+        <div>
+            <label for="weight">Weight (lbs):</label><br />
+            <input type="text" id="weight" name="weight" />
+        </div>
+    
+        <div>
+            <label for="gender">Height (ft)</label><br />
+            <input type="text" id="gender" name="gender" /><br />
+        </div>
+        <div>
+            <label for="weight">Height (in)</label><br />
+            <input type="text" id="weight" name="weight" />
+        </div>
+        <div>
+            <label for="weight">Age</label><br />
+            <input type="text" id="weight" name="weight" />
+        </div>
+    </form>
+    <!-- put button at bottom of form -->
+</section>
+
+<style>
+	#form {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+	}
+</style>
