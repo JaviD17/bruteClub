@@ -5,7 +5,6 @@
 <h2 class="text-center mt-14 mx-6 py-6 bg-black/50 rounded-lg text-4xl font-bold">Calculator Page</h2>
 
 <section id="calc-section">
-    <!-- <CalcCard let:cal -->
 	<CalcCard />
 	<CalcCard />
 	<CalcCard />

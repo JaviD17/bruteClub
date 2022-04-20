@@ -7,7 +7,7 @@
 
 @layer components {
 	.input-btn {
-		@apply rounded-lg h-10 w-48 mb-4
+		@apply rounded-lg h-10 w-48 mb-4 focus:outline-none focus:ring ring-cyan-300 bg-black/60
 	}
 	.div-calc {
 		@apply my-px
