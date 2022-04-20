@@ -7,7 +7,10 @@
 
 @layer components {
 	.input-btn {
-		@apply rounded-lg h-10 w-48 mb-4 focus:outline-none focus:ring ring-cyan-300 bg-black/60
+		@apply text-center rounded-lg h-14 m-2 focus:outline-none focus:ring ring-cyan-300 bg-gray-700/80
+	}
+	.label-btn {
+		@apply mx-4
 	}
 	.div-calc {
 		@apply my-px
