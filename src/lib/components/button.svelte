@@ -92,7 +92,7 @@
 	{#each navLinks as { name, href, svg }}
 		<button
 			on:click
-			class="grid text-xl font-bold bg-gray-900/20 hover:bg-gray-100/75 p-2 m-2 rounded-full ease-in-out duration-400 hover:outline outline-offset-2 outline-2 outline-cyan-300 hover:text-gray-900"
+			class="grid text-xl font-bold bg-gray-600/40 hover:bg-gray-100/75 p-2 m-2 rounded-full ease-in-out duration-400 hover:outline outline-offset-2 outline-2 outline-cyan-300 hover:text-gray-900"
 		>
 			<a {href}>
 				<slot name="navLinks" navName={name} />

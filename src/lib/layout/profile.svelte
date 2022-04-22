@@ -15,7 +15,7 @@
 	}
 </script>
 
-<section on:mouseenter={enter} on:mouseleave={leave} id="profileIcon" class="grid self-start">
+<section on:mouseenter={enter} on:mouseleave={leave} id="profileIcon" class="md:grid self-start absolute right-2 hidden">
 	<Button>
 		<svelte:fragment slot="profile" let:proSvg>{@html proSvg}</svelte:fragment>
 	</Button>

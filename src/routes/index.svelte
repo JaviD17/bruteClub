@@ -11,7 +11,7 @@
 <section class="main-card">
 	<section
 		id="title"
-		class="grid content-center text-6xl text-center mx-4 p-4 mt-16 text-gray-200 bg-black/70 rounded-lg"
+		class="grid content-center text-6xl text-center mx-4 p-4 md:mt-16 text-gray-200 bg-black/70 rounded-lg"
 	>
 		<h1 class="font-bold">Brute Club</h1>
 		<p class="text-xl">Your Darkness is Your Development</p>

@@ -2,6 +2,7 @@
 	import Button from '$lib/components/button.svelte';
 
 	let macros = {
+		calories: null,
 		protein: null,
 		carbs: null,
 		fat: null
@@ -33,18 +34,21 @@
 
 		if (calcData.goal === '1') {
 			return {
+				calories: Math.floor(formulaM),
 				protein: Math.floor((formulaM * 0.3) / 4),
 				carbs: Math.floor((formulaM * 0.4) / 4),
 				fat: Math.floor((formulaM * 0.3) / 9)
 			};
 		} else if (calcData.goal === '1.1' || calcData.goal === '1.2' || calcData.goal === '1.4') {
 			return {
+				calories: Math.floor(formulaM),
 				protein: Math.floor((formulaM * 0.3) / 4),
 				carbs: Math.floor((formulaM * 0.5) / 4),
 				fat: Math.floor((formulaM * 0.2) / 9)
 			};
 		} else if (calcData.goal === '0.9' || calcData.goal === '0.8' || calcData.goal === '0.6') {
 			return {
+				calories: Math.floor(formulaM),
 				protein: Math.floor((formulaM * 0.5) / 4),
 				carbs: Math.floor((formulaM * 0.25) / 4),
 				fat: Math.floor((formulaM * 0.25) / 9)
@@ -60,18 +64,21 @@
 
 		if (calcData.goal === '1') {
 			return {
+				calories: Math.floor(formulaW),
 				protein: Math.floor((formulaW * 0.3) / 4),
 				carbs: Math.floor((formulaW * 0.4) / 4),
 				fat: Math.floor((formulaW * 0.3) / 9)
 			};
 		} else if (calcData.goal === '1.1' || calcData.goal === '1.2' || calcData.goal === '1.4') {
 			return {
+				calories: Math.floor(formulaW),
 				protein: Math.floor((formulaW * 0.3) / 4),
 				carbs: Math.floor((formulaW * 0.5) / 4),
 				fat: Math.floor((formulaW * 0.2) / 9)
 			};
 		} else if (calcData.goal === '0.9' || calcData.goal === '0.8' || calcData.goal === '0.6') {
 			return {
+				calories: Math.floor(formulaW),
 				protein: Math.floor((formulaW * 0.5) / 4),
 				carbs: Math.floor((formulaW * 0.25) / 4),
 				fat: Math.floor((formulaW * 0.25) / 9)
@@ -82,14 +89,16 @@
 	function calculate() {
 		console.log({ calcData });
 		if (calcData.gender == 'male') {
-			let { protein, carbs, fat } = formulaM();
+			let { calories, protein, carbs, fat } = formulaM();
 			// console.log(protein, carbs, fat);
+			macros.calories = calories;
 			macros.protein = protein;
 			macros.carbs = carbs;
 			macros.fat = fat;
 			console.log({ macros });
-		} else if (calcData.gender === 'female') {
-			let { protein, carbs, fat } = formulaW();
+		} else if (calcData.gender == 'female') {
+			let { calories, protein, carbs, fat } = formulaW();
+			macros.calories = calories;
 			macros.protein = protein;
 			macros.carbs = carbs;
 			macros.fat = fat;
@@ -108,10 +117,11 @@
 </script>
 
 <section
+	id="calc-card"
 	class="grid bg-black/80 mx-10 my-8 pb-2 rounded-lg outline outline-offset-2 outline-cyan-300"
 >
 	<h3 class="text-center mt-4 text-2xl font-bold">{calcData.name}</h3>
-	<form id="form" class="text-xl justify-items-center pt-4">
+	<form id="form" class="text-xl pt-4">
 		<div class="div-calc">
 			<label for="gender" class="label-btn">Gender</label><br />
 			<select bind:value={calcData.gender} class="input-btn" id="gender" name="gender">
@@ -188,11 +198,12 @@
 				<option value="1.4">Rapid Weight Gain (2% body weight/month)</option>
 			</select>
 		</div>
-		{#if macros.protein !== null}
+		{#if macros.calories !== null}
 			<section class="text-center text-xl self-center mt-2">
-				{macros.protein} P
-				{macros.carbs} C
-				{macros.fat} F
+				<p>{macros.calories} Calories</p>
+				<p>{macros.protein}g Protein</p>
+				<p>{macros.carbs}g Carbs</p>
+				<p>{macros.fat}g Fat</p>
 			</section>
 		{/if}
 	</form>
@@ -202,8 +213,8 @@
 <style>
 	#form {
 		display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+		flex-wrap: wrap;
+		justify-content: center;
 		/* grid-gap: 1rem; */
 		/* grid-template-columns: 1fr 1fr 1fr;
 		grid-template-rows: 1fr 1fr; */

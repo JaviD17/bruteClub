@@ -15,6 +15,15 @@
 	.div-calc {
 		@apply my-px
 	}
+	.nav {
+		@apply grid auto-rows-auto
+	}
+	.nav-mobile{
+		@apply grid justify-start
+	}
+	.layout-container {
+		@apply grid
+	}
 }
 
 body {

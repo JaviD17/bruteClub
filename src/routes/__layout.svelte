@@ -9,7 +9,7 @@
 	}
 </script>
 
-<section id="container">
+<section id="container" class="md:layout-container">
 	<Profile />
 	<Header on:click={handleMessage} />
 
@@ -23,7 +23,6 @@
 
 <style>
 	#container {
-		display: grid;
 		/* grid-gap: 1rem; */
 		grid-template-columns: 2fr 18fr 1fr;
 		grid-template-rows: 1fr 50px;
