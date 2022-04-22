@@ -15,11 +15,11 @@
 	.div-calc {
 		@apply my-px
 	}
-	.nav {
+	.nav-mobile {
 		@apply grid auto-rows-auto
 	}
-	.nav-mobile{
-		@apply grid justify-start
+	.nav {
+		@apply grid auto-rows-auto 
 	}
 	.layout-container {
 		@apply grid

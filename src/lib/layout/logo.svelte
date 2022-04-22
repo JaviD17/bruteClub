@@ -1,4 +1,4 @@
-<div on:click class="md:hidden mx-4 mt-6">
+<div on:click class="md:hidden mx-4 py-4 overflow-hidden">
 	<a href="/">
 		<svg
 			class="bg-black/60 rounded-lg"
