@@ -8,12 +8,6 @@
 		fat: null
 	};
 
-	// All Calcs
-	// Macro Calc
-	// FFMI Calc
-	// 1RM Calc
-	// Body fat chart
-
 	let calcData = {
 		name: 'Macro Calculator',
 		gender: '',
@@ -104,21 +98,12 @@
 			macros.fat = fat;
 			console.log({ macros });
 		}
-
-		// maintain ratios (balanced)
-		// 30% P, 40% C, 30% F
-
-		// cut ratios (high protein)
-		// 50% P, 25% C, 25% F
-
-		// bulk ratios (high carb)
-		// 30% P, 50% C, 20% F
 	}
 </script>
 
 <section
 	id="calc-card"
-	class="grid bg-black/80 mx-10 my-8 pb-2 rounded-lg outline outline-offset-2 outline-cyan-300"
+	class="flex flex-col justify-between bg-black/80 mx-10 my-8 pb-2 rounded-lg outline outline-offset-2 outline-cyan-300"
 >
 	<h3 class="text-center mt-4 text-2xl font-bold">{calcData.name}</h3>
 	<form id="form" class="text-xl pt-4">
@@ -198,15 +183,15 @@
 				<option value="1.4">Rapid Weight Gain (2% body weight/month)</option>
 			</select>
 		</div>
-		{#if macros.calories !== null}
-			<section class="text-center text-xl self-center mt-2">
-				<p>{macros.calories} Calories</p>
-				<p>{macros.protein}g Protein</p>
-				<p>{macros.carbs}g Carbs</p>
-				<p>{macros.fat}g Fat</p>
-			</section>
-		{/if}
 	</form>
+	{#if macros.calories !== null}
+		<section class="text-left text-xl self-center mt-2">
+			<p>{macros.calories} Calories</p>
+			<p>{macros.protein}g Protein</p>
+			<p>{macros.carbs}g Carbs</p>
+			<p>{macros.fat}g Fat</p>
+		</section>
+	{/if}
 	<Button on:click|once={calculate} let:calculate><p slot="calculate">{calculate}</p></Button>
 </section>
 
