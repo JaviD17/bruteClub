@@ -1,14 +1,16 @@
 <script>
 	import MacroCalc from '$lib/components/calculators/macro.svelte';
     import FfmiCalc from "$lib/components/calculators/ffmi.svelte";
+    import OneRm from '$lib/components/calculators/oneRm.svelte';
 
 </script>
 
 <h2 class="text-center mt-14 mx-6 py-6 bg-black/50 rounded-lg text-4xl font-bold">Calculator Page</h2>
 
-<section id="calc-section" class="lg:flex">
+<section id="calc-section" class="lg:grid grid-cols-2 grid-rows-2 grid-flow-row-dense">
 	<MacroCalc />
 	<FfmiCalc />
+    <OneRm />
 </section>
 
 <style>

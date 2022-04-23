@@ -103,7 +103,7 @@
 
 <section
 	id="calc-card"
-	class="flex flex-col justify-between bg-black/80 mx-10 my-8 pb-2 rounded-lg outline outline-offset-2 outline-cyan-300"
+	class="row-span-2 flex flex-col justify-between bg-black/80 mx-10 my-8 pb-2 rounded-lg outline outline-offset-2 outline-cyan-300"
 >
 	<h3 class="text-center mt-4 text-2xl font-bold">{calcData.name}</h3>
 	<form id="form" class="text-xl pt-4">
