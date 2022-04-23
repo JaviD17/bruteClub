@@ -186,7 +186,7 @@
 	</form>
 	{#if macros.calories !== null}
 		<section class="text-left text-xl self-center mt-2">
-			<p>{macros.calories} Calories</p>
+			<p>{macros.calories} Calories (TDEE)</p>
 			<p>{macros.protein}g Protein</p>
 			<p>{macros.carbs}g Carbs</p>
 			<p>{macros.fat}g Fat</p>
