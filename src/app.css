@@ -7,7 +7,7 @@
 
 @layer components {
 	.input-btn {
-		@apply text-center rounded-lg py-4 m-2 focus:outline-none focus:ring ring-cyan-500 bg-neutral-700/80;
+		@apply text-center rounded-lg py-4 m-2 focus:outline-none focus:ring ring-neutral-900 bg-neutral-900;
 	}
 	.label-btn {
 		@apply mx-4;

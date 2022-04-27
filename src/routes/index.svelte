@@ -13,7 +13,7 @@
 		id="title"
 		class="col-span-3 2xl:col-span-4 grid content-center text-6xl text-center mx-6 md:mt-16 text-neutral-100 bg-neutral-700 rounded-xl"
 	>
-		<h1 class="font-bold">DS17</h1>
+		<h1 class="font-bold bg-neutral-900 mt-4">DS17</h1>
 		<p class="text-xl">Easy Choices -> Hard Life</p>
 		<p class="text-xl">Hard Choices -> Easy Life</p>
 		<Button><p slot="calcs" let:calcName>{calcName}</p></Button>
