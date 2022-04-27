@@ -47,7 +47,7 @@
 					<p class="">By: {author}</p>
 				</div>
 				<Button on:click
-					><p id="button" class="inline" slot="blog" let:blogName>{blogName}</p></Button
+					><p id="button" class="inline font-bold" slot="blog" let:blogName>{blogName}</p></Button
 				>
 			</div>
 		</a>

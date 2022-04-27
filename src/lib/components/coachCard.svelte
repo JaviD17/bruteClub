@@ -2,84 +2,54 @@
 	import Button from '$lib/components/button.svelte';
 	let newBlog = [
 		{
-			title: 'How to Cut',
-			date: 'April 15th, 2022',
-			author: 'Javier Dominguez II',
-			summary: 'Using science is the most effective way to cut in 2022. Click this to learn!'
+			title: '8-12 Week Cut/Bulk',
+			level: 'Beginner - Advanced',
+			summary:
+				'Get setup with a meal plan catered to you for an 8 week cut / bulk + unlimited questions with a 24hr response time including weekly macro adjustments.'
 		},
 		{
-			title: 'How to Maintain',
-			date: 'April 16th, 2022',
-			author: 'Javier Dominguez II',
-			summary: 'Using science is the most effective way to maintain in 2022. Click this to learn!'
+			title: '10 Week Powerbuilding Plan',
+			level: 'Intermediate - Advanced',
+			summary:
+				'Get setup with a plan catered to you for an 8 week cut / bulk + unlimited questions with a 24hr response time including weekly macro adjustments.'
 		},
 		{
-			title: 'How to Maintain',
-			date: 'April 16th, 2022',
-			author: 'Javier Dominguez II',
-			summary: 'Using science is the most effective way to maintain in 2022. Click this to learn!'
+			title: '16 Week Transformation',
+			level: 'Advanced',
+			summary:
+				'Get setup with a meal plan catered to you for an 8 week cut / bulk + unlimited questions with a 24hr response time including weekly macro adjustments.'
 		}
 	];
 </script>
 
 {#if $$slots.info}
-	{#each newBlog as { title, date, author, summary }}
-		<a id="inner-card-a" href="./blogs" class="bg-neutral-700 m-8 rounded-lg overflow-hidden flex flex-wrap text-neutral-100 shadow shadow-neutral-700">
-			<div id="card-img">
-				<img
-					src="./blog1.jpg"
-					alt="man prepping food"
-					class="rounded-lg object-cover object-center h-full"
-					id="card-img"
-				/>
-			</div>
-			<div id="card-details" class="text-base">
-				<div id="details-content" class="p-px mx-6 mt-4">
-					<p>{summary}</p>
+	{#each newBlog as { title, level, summary }}
+		<a
+			href="./blogs"
+			class="flex flex-col justify-between bg-neutral-700 m-8 rounded-lg overflow-hidden text-neutral-100 shadow shadow-neutral-700"
+		>
+			<section class="text-base">
+				<div class="p-px m-6">
+					<h2
+						class="p-2 text-3xl font-bold text-cyan-500 text-center border-4 border-neutral-900 rounded-lg"
+					>
+						{title}
+					</h2>
 				</div>
-				<div id="details-by" class="mx-6 border-t-2 border-neutral-100">
-					<h2 class="mt-2 text-3xl font-bold text-cyan-500">{title}</h2>
-					<slot name="info" {date} />
-					<p class="">By: {author}</p>
+
+				<div class="mx-6 my-2">
+                    <p>{summary}</p>
+					<Button on:click
+						><p class="inline font-bold" slot="services" let:serviceName>
+							{serviceName}
+						</p></Button
+					>
+					<slot name="info" {level} />
 				</div>
-				<Button on:click
-					><p id="button" class="inline" slot="blog" let:blogName>{blogName}</p></Button
-				>
-			</div>
+			</section>
 		</a>
 	{/each}
 {/if}
 
 <style>
-	#button {
-		grid-area: 'button';
-	}
-	#card-img {
-		grid-area: 'card-img';
-	}
-	#details-content {
-		grid-area: 'details-content';
-	}
-	#details-by {
-		grid-area: 'details-by';
-	}
-	#card-details {
-		grid-area: 'card-details';
-		display: grid;
-		grid-template-rows: 1fr 1fr 0.5fr;
-		grid-template-areas:
-			'details-content'
-			'details-by'
-			'button';
-	}
-	#inner-card-a {
-		display: grid;
-	}
-	/* @media (min-width: 768px) {
-		#inner-card-a {
-			display: grid;
-			grid-template-columns: 1.5fr 2fr;
-			grid-template-areas: 'card-img card-content';
-		}
-	} */
 </style>

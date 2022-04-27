@@ -86,6 +86,11 @@
 	let calculate = {
 		name: 'Calculate'
 	};
+
+	let serviceBtn = {
+		name: 'Read More',
+		href: './coaches'
+	}
 </script>
 
 {#if $$slots.navLinks}
@@ -154,5 +159,16 @@
 		class="justify-self-end nav-btn"
 	>
 		<slot name="calculate" calculate={calculate.name} />
+	</button>
+{/if}
+
+{#if $$slots.services}
+	<button
+		on:click
+		class="nav-btn"
+	>
+		<a href={serviceBtn.href}>
+			<slot name="services" serviceName={serviceBtn.name} />
+		</a>
 	</button>
 {/if}
