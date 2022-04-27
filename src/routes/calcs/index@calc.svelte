@@ -4,7 +4,7 @@
 	import OneRm from '$lib/components/calculators/oneRm.svelte';
 </script>
 
-<h2 class="text-center mt-14 mx-6 py-6 bg-neutral-700 rounded-lg text-4xl font-bold">
+<h2 class="headings">
 	Calculators
 </h2>
 
