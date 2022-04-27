@@ -24,7 +24,11 @@
 
 {#if $$slots.info}
 	{#each newBlog as { title, date, author, summary }}
-		<a id="inner-card-a" href="./blogs" class="bg-neutral-700 m-8 rounded-lg overflow-hidden flex flex-wrap text-neutral-100">
+		<a
+			id="inner-card-a"
+			href="./blogs"
+			class="bg-neutral-700 m-8 rounded-lg overflow-hidden flex flex-wrap text-neutral-100 shadow shadow-neutral-600"
+		>
 			<div id="card-img">
 				<img
 					src="./blog1.jpg"
@@ -75,11 +79,4 @@
 	#inner-card-a {
 		display: grid;
 	}
-	/* @media (min-width: 768px) {
-		#inner-card-a {
-			display: grid;
-			grid-template-columns: 1.5fr 2fr;
-			grid-template-areas: 'card-img card-content';
-		}
-	} */
 </style>

@@ -4,9 +4,10 @@
 	import OneRm from '$lib/components/calculators/oneRm.svelte';
 </script>
 
-<h2 class="headings">
-	Calculators
-</h2>
+<section class="headings">
+	<h2 class="my-2 bg-neutral-900">Calculators</h2>
+</section>
+
 
 <section id="calc-section" class="xl:grid grid-cols-2 grid-rows-2 grid-flow-row-dense">
 	<MacroCalc />

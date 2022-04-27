@@ -1,7 +1,9 @@
 <script>
-	import Card from '$lib/components/card.svelte';
-	export const title = 'DS17';
+	import Card from '$lib/components/blogCard.svelte';
 	import Button from '$lib/components/button.svelte';
+	import CoachCard from '$lib/components/coachCard.svelte';
+
+	export const title = 'DS17';
 </script>
 
 <svelte:head>
@@ -13,19 +15,26 @@
 		id="title"
 		class="col-span-3 2xl:col-span-4 grid content-center text-6xl text-center mx-6 md:mt-16 text-neutral-100 bg-neutral-700 rounded-xl"
 	>
-		<h1 class="font-bold bg-neutral-900 mt-4">DS17</h1>
+		<h1 class="font-bold bg-neutral-900 my-4">DS17</h1>
 		<p class="text-xl">Easy Choices -> Hard Life</p>
 		<p class="text-xl">Hard Choices -> Easy Life</p>
 		<Button><p slot="calcs" let:calcName>{calcName}</p></Button>
 	</section>
 
 	<section
-		class="col-span-3 2xl:col-span-4 grid content-center text-6xl text-center m-6 text-neutral-100 bg-neutral-700 rounded-xl"
+		class="col-span-3 2xl:col-span-4 grid grid-cols-3 content-center text-6xl text-center m-6 text-neutral-100 bg-neutral-700 rounded-xl"
 	>
-		<h2 class="font-bold">DS17</h2>
-		<p class="text-xl">Easy Choices -> Hard Life</p>
-		<p class="text-xl">Hard Choices -> Easy Life</p>
-		<Button><p slot="calcs" let:calcName>{calcName}</p></Button>
+		<h2 class="font-bold bg-neutral-900 my-4 col-span-3">Coaching</h2>
+		<!-- <Button><p slot="calcs" let:calcName>{calcName}</p></Button> -->
+	</section>
+
+	<CoachCard let:date><p slot="info">Date: {date}</p></CoachCard>
+
+	<section
+		class="col-span-3 2xl:col-span-4 grid grid-cols-3 content-center text-6xl text-center m-6 text-neutral-100 bg-neutral-700 rounded-xl"
+	>
+		<h2 class="font-bold bg-neutral-900 my-4 col-span-3">Blog</h2>
+		<!-- <Button><p slot="calcs" let:calcName>{calcName}</p></Button> -->
 	</section>
 
 	<Card let:date><p class="" slot="info">Date: {date}</p></Card>

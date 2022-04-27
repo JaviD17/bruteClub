@@ -15,7 +15,12 @@
 	}
 </script>
 
-<section on:mouseenter={enter} on:mouseleave={leave} id="profileIcon" class="md:grid self-start absolute right-2 hidden">
+<section
+	on:mouseenter={enter}
+	on:mouseleave={() => setTimeout(leave, 1000 / 2)}
+	id="profileIcon"
+	class="md:grid self-start absolute right-2 hidden"
+>
 	<Button>
 		<svelte:fragment slot="profile" let:proSvg>{@html proSvg}</svelte:fragment>
 	</Button>
