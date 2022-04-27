@@ -106,7 +106,7 @@
 	class="row-span-2 flex flex-col justify-between bg-neutral-700 mx-10 my-8 pb-2 rounded-lg"
 >
 	<h3 class="text-center mt-4 text-2xl font-bold bg-neutral-900">{calcData.name}</h3>
-	<form id="form" class="text-xl pt-4">
+	<form id="form" class="text-xl pt-4 overflow-hidden">
 		<div class="div-calc">
 			<label for="gender" class="label-btn">Gender</label><br />
 			<select bind:value={calcData.gender} class="input-btn" id="gender" name="gender">

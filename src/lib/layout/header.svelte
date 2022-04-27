@@ -1,7 +1,7 @@
 <script>
 	import Logo from '$lib/layout/logo.svelte';
 	import Nav from '$lib/layout/nav.svelte';
-	
+
 	let clicked = false;
 
 	function handleClick() {
