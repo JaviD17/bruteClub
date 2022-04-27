@@ -12,13 +12,19 @@
 			date: 'April 16th, 2022',
 			author: 'Javier Dominguez II',
 			summary: 'Using science is the most effective way to maintain in 2022. Click this to learn!'
+		},
+		{
+			title: 'How to Maintain',
+			date: 'April 16th, 2022',
+			author: 'Javier Dominguez II',
+			summary: 'Using science is the most effective way to maintain in 2022. Click this to learn!'
 		}
 	];
 </script>
 
 {#if $$slots.info}
 	{#each newBlog as { title, date, author, summary }}
-		<a id="inner-card-a" href="./blogs" class="bg-black/70 m-4 rounded-lg overflow-hidden">
+		<a id="inner-card-a" href="./blogs" class="bg-neutral-700 m-8 rounded-lg overflow-hidden flex flex-wrap text-neutral-100">
 			<div id="card-img">
 				<img
 					src="./blog1.jpg"
@@ -31,8 +37,8 @@
 				<div id="details-content" class="p-px mx-6 mt-4">
 					<p>{summary}</p>
 				</div>
-				<div id="details-by" class="mx-6 border-t-2 border-gray-100">
-					<h2 class="mt-2 text-3xl font-bold text-cyan-300">{title}</h2>
+				<div id="details-by" class="mx-6 border-t-2 border-neutral-100">
+					<h2 class="mt-2 text-3xl font-bold text-cyan-500">{title}</h2>
 					<slot name="info" {date} />
 					<p class="">By: {author}</p>
 				</div>
@@ -69,11 +75,11 @@
 	#inner-card-a {
 		display: grid;
 	}
-	@media (min-width: 768px) {
+	/* @media (min-width: 768px) {
 		#inner-card-a {
 			display: grid;
-			grid-template-columns: 1fr 3fr;
+			grid-template-columns: 1.5fr 2fr;
 			grid-template-areas: 'card-img card-content';
 		}
-	}
+	} */
 </style>

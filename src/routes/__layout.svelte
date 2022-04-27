@@ -28,7 +28,7 @@
 		grid-template-rows: 1fr 50px;
 		grid-template-areas:
 			'header main profile'
-			'footer footer footer';
+			'header footer footer';
 	}
 
 	#main {

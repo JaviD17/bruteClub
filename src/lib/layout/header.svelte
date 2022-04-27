@@ -10,7 +10,7 @@
 	}
 </script>
 
-<header class="md:bg-black/50">
+<header class="md:bg-neutral-800">
 	<Logo on:click={handleClick} />
 	<Nav on:click active={clicked} />
 </header>

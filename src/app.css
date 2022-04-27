@@ -7,27 +7,33 @@
 
 @layer components {
 	.input-btn {
-		@apply text-center rounded-lg py-4 m-2 focus:outline-none focus:ring ring-cyan-300 bg-gray-700/80
+		@apply text-center rounded-lg py-4 m-2 focus:outline-none focus:ring ring-cyan-500 bg-neutral-700/80;
 	}
 	.label-btn {
-		@apply mx-4
+		@apply mx-4;
 	}
 	.div-calc {
-		@apply my-px
+		@apply my-px;
 	}
 	.nav-mobile {
-		@apply grid auto-rows-auto
+		@apply grid auto-rows-auto;
 	}
 	.nav {
-		@apply grid auto-rows-auto 
+		@apply grid auto-rows-auto;
+	}
+	.nav-btn {
+		@apply text-xl font-bold bg-neutral-400 hover:bg-neutral-500 p-2 m-2 rounded-full transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-95 shadow-inner shadow-neutral-900 text-neutral-900
+	}
+	.profile-btn {
+		@apply text-xl font-bold bg-neutral-400 hover:bg-neutral-500 mt-3 mr-1 rounded-full transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-95 shadow-inner shadow-neutral-900 text-neutral-900
 	}
 	.layout-container {
-		@apply grid
+		@apply grid;
 	}
 }
 
 body {
-	background-color: #404040;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url('./hero.jpg');
-	background-attachment: fixed;
+	background-color: #171717;
+	/* background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url('./hero.jpg'); */
+	/* background-attachment: fixed; */
 }

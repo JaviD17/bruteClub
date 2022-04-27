@@ -9,7 +9,7 @@
 </nav>
 
 {#if active}
-	<nav class="nav-mobile md:hidden bg-black/60 rounded-lg mt-2 mb-4 mx-4">
+	<nav class="nav-mobile md:hidden bg-neutral-900 rounded-lg mt-2 mb-4 mx-4">
 		<Button on:click><p class="inline" slot="navLinks" let:navName>{navName}</p></Button>
 	</nav>
 {/if}

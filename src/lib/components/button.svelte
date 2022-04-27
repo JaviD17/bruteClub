@@ -92,7 +92,7 @@
 	{#each navLinks as { name, href, svg }}
 		<button
 			on:click
-			class="grid text-xl font-bold bg-gray-600/40 hover:bg-gray-100/75 p-2 m-2 rounded-full ease-in-out duration-400 hover:outline outline-offset-2 outline-2 outline-cyan-300 hover:text-gray-900"
+			class="grid nav-btn"
 		>
 			<a {href}>
 				<slot name="navLinks" navName={name} />
@@ -102,10 +102,12 @@
 	{/each}
 {/if}
 
+<!-- 		class="font-bold bg-neutral-900/20 hover:bg-neutral-100/75 mt-1.5 mr-1.5 rounded-full ease-in-out duration-400 hover:outline outline-offset-2 outline-2 outline-cyan-500 hover:text-neutral-900" -->
+
 {#if $$slots.profile}
 	<button
 		on:click
-		class="font-bold bg-gray-900/20 hover:bg-gray-100/75 mt-1.5 mr-1.5 rounded-full ease-in-out duration-400 hover:outline outline-offset-2 outline-2 outline-cyan-300 hover:text-gray-900"
+		class="profile-btn"
 	>
 		<slot name="profile" {proSvg} />
 	</button>
@@ -115,7 +117,7 @@
 	{#each profileLinks as { name, href }}
 		<button
 			on:click
-			class="grid text-xl font-bold bg-gray-900/20 hover:bg-gray-100/75 p-2 m-2 rounded-full ease-in-out duration-400 hover:outline outline-offset-2 outline-2 outline-cyan-300 hover:text-gray-900"
+			class="grid nav-btn"
 		>
 			<a {href}>
 				<slot name="profileLinks" proName={name} />
@@ -127,7 +129,7 @@
 {#if $$slots.blog}
 	<button
 		on:click
-		class="justify-self-start text-xl font-bold text-gray-900 bg-gray-100/60 hover:bg-gray-900/75 p-2 my-4 mx-6 rounded-full ease-in-out duration-400 hover:outline outline-offset-2 outline-2 outline-cyan-300 hover:text-gray-100"
+		class="nav-btn"
 	>
 		<a href={blog.href}>
 			<slot name="blog" blogName={blog.name} />
@@ -138,7 +140,7 @@
 {#if $$slots.calcs}
 	<button
 		on:click
-		class="justify-self-center text-xl font-bold text-gray-900 bg-gray-100/60 hover:bg-gray-900/75 p-2 m-2 rounded-full ease-in-out duration-400 hover:outline outline-offset-2 outline-2 outline-cyan-300 hover:text-gray-100"
+		class="nav-btn"
 	>
 		<a href={calcBtn.href}>
 			<slot name="calcs" calcName={calcBtn.name} />
@@ -149,7 +151,7 @@
 {#if $$slots.calculate}
 	<button
 		on:click
-		class="justify-self-end text-xl font-bold text-gray-900 bg-gray-100/60 hover:bg-gray-900/75 p-2 m-2 rounded-full ease-in-out duration-400 hover:outline outline-offset-2 outline-2 outline-cyan-300 hover:text-gray-100"
+		class="justify-self-end nav-btn"
 	>
 		<slot name="calculate" calculate={calculate.name} />
 	</button>

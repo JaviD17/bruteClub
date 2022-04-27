@@ -21,7 +21,7 @@
 	</Button>
 
 	{#if hovering}
-		<section id="submenu" class="bg-black/70 absolute right-20 top-4 rounded-lg grid">
+		<section id="submenu" class="bg-neutral-900 absolute right-20 top-4 rounded-lg grid">
 			<Button on:click={handleMessage} let:proName>
 				<p slot="profileLinks" class="inline">{proName}</p>
 			</Button>
