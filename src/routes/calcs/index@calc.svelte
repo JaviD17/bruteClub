@@ -5,7 +5,7 @@
 </script>
 
 <h2 class="text-center mt-14 mx-6 py-6 bg-neutral-700 rounded-lg text-4xl font-bold">
-	Calculator Page
+	Calculators
 </h2>
 
 <section id="calc-section" class="xl:grid grid-cols-2 grid-rows-2 grid-flow-row-dense">
