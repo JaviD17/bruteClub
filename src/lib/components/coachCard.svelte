@@ -38,7 +38,7 @@
 				</div>
 
 				<div class="mx-6 my-2">
-                    <p>{summary}</p>
+					<p>{summary}</p>
 					<Button on:click
 						><p class="inline font-bold" slot="services" let:serviceName>
 							{serviceName}
@@ -50,6 +50,3 @@
 		</a>
 	{/each}
 {/if}
-
-<style>
-</style>

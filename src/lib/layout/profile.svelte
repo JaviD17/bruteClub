@@ -3,11 +3,22 @@
 
 	let hovering;
 
+	// let delay = () => {
+	// 	setTimeout()
+	// }
+
 	function enter() {
 		hovering = true;
 	}
 	function leave() {
-		hovering = false;
+		// hovering = false;
+		setTimeout(() => {
+			hovering = false
+		}, 2000);
+
+	// 	setTimeout(() => {
+    //   greet = true;
+    // }, 2000)
 	}
 
 	function handleMessage(event) {
@@ -26,10 +37,7 @@
 	</Button>
 
 	{#if hovering}
-		<section
-			id="submenu"
-			class="bg-neutral-900 absolute right-20 top-4 rounded-lg grid"
-		>
+		<section id="submenu" class="bg-neutral-900 absolute right-20 top-4 rounded-lg grid">
 			<Button on:click={handleMessage} let:proName>
 				<p slot="profileLinks" class="inline">{proName}</p>
 			</Button>

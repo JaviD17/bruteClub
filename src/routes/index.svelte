@@ -13,7 +13,7 @@
 <section class="main-card lg:grid grid-cols-3 2xl:grid-cols-4">
 	<section
 		id="title"
-		class="col-span-3 2xl:col-span-4 grid content-center text-6xl text-center mx-6 md:mt-16 text-neutral-100 bg-neutral-700 rounded-xl"
+		class="col-span-3 2xl:col-span-4 grid content-center text-6xl text-center mx-6 md:mt-16 text-neutral-100 bg-neutral-700 rounded-xl shadow shadow-neutral-700"
 	>
 		<h1 class="font-bold bg-neutral-900 my-4">DS17</h1>
 		<p class="text-xl">Easy Choices -> Hard Life</p>
@@ -22,7 +22,7 @@
 	</section>
 
 	<section
-		class="col-span-3 2xl:col-span-4 grid grid-cols-3 content-center text-6xl text-center m-6 text-neutral-100 bg-neutral-700 rounded-xl"
+		class="col-span-3 2xl:col-span-4 grid grid-cols-3 content-center text-6xl text-center m-6 text-neutral-100 bg-neutral-700 rounded-xl shadow shadow-neutral-700"
 	>
 		<h2 class="font-bold bg-neutral-900 my-4 col-span-3">Coaching</h2>
 		<!-- <Button><p slot="calcs" let:calcName>{calcName}</p></Button> -->

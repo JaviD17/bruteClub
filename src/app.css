@@ -31,7 +31,7 @@
 		@apply grid;
 	}
 	.headings {
-		@apply text-center mt-14 mx-6 py-2 bg-neutral-700 rounded-lg text-4xl font-bold;
+		@apply text-center mt-14 mx-6 py-2 bg-neutral-700 rounded-lg text-4xl font-bold shadow shadow-neutral-700;
 	}
 }
 
