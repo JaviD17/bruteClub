@@ -22,7 +22,7 @@
 	<section
 		on:mouseleave={leave}
 		id="submenu"
-		class="bg-neutral-900 absolute right-20 top-8 rounded-lg grid"
+		class="bg-neutral-800/80 absolute top-8 rounded-lg grid py-4 px-1 shadow shadow-neutral-800"
 	>
 		<Button on:click let:proName>
 			<p slot="profileLinks" class="inline">{proName}</p>
@@ -33,5 +33,10 @@
 <style>
 	#profileIcon {
 		grid-area: profile;
+	}
+	#submenu {
+		right: 1rem;
+		top: 5.5rem;
+
 	}
 </style>
