@@ -2,23 +2,21 @@
 	import Button from '$lib/components/button.svelte';
 
 	let hovering;
+	let status;
 
-	// let delay = () => {
-	// 	setTimeout()
+	// function enter() {
+	// 	hovering = true;
+	// }
+	// function leave() {
+	// 	if (!status) {
+	// 		setTimeout(() => {
+	// 			hovering = false;
+	// 		}, 3000);
+	// 	}
 	// }
 
-	function enter() {
-		hovering = true;
-	}
-	function leave() {
-		// hovering = false;
-		setTimeout(() => {
-			hovering = false
-		}, 2000);
-
-	// 	setTimeout(() => {
-    //   greet = true;
-    // }, 2000)
+	function handleStatus(proHover = null, subHover = null) {
+		// for hovering profile and submenu
 	}
 
 	function handleMessage(event) {
@@ -27,23 +25,28 @@
 </script>
 
 <section
-	on:mouseenter={enter}
-	on:mouseleave={leave}
+	on:mouseenter={() => handleStatus()}
+	on:mouseleave={() => handleStatus()}
 	id="profileIcon"
 	class="md:grid self-start absolute right-2 hidden"
 >
 	<Button>
 		<svelte:fragment slot="profile" let:proSvg>{@html proSvg}</svelte:fragment>
 	</Button>
-
-	{#if hovering}
-		<section id="submenu" class="bg-neutral-900 absolute right-20 top-4 rounded-lg grid">
-			<Button on:click={handleMessage} let:proName>
-				<p slot="profileLinks" class="inline">{proName}</p>
-			</Button>
-		</section>
-	{/if}
 </section>
+
+{#if hovering}
+	<section
+		on:mouseenter={() => handleStatus(true, true)}
+		on:mouseleave={() => handleStatus(false, false)}
+		id="submenu"
+		class="bg-neutral-900 absolute right-20 top-4 rounded-lg grid"
+	>
+		<Button on:click={handleMessage} let:proName>
+			<p slot="profileLinks" class="inline">{proName}</p>
+		</Button>
+	</section>
+{/if}
 
 <style>
 	#profileIcon {

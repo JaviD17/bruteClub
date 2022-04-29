@@ -82,7 +82,7 @@
 		name: 'Calculate Your Freedom',
 		href: './calcs'
 	};
-	
+
 	let calculate = {
 		name: 'Calculate'
 	};
@@ -90,12 +90,12 @@
 	let serviceBtn = {
 		name: 'Read More',
 		href: './coaches'
-	}
+	};
 </script>
 
 {#if $$slots.navLinks}
 	{#each navLinks as { name, href, svg }}
-		<button
+		<!-- <button
 			on:click
 			class="grid nav-btn"
 		>
@@ -103,39 +103,42 @@
 				<slot name="navLinks" navName={name} />
 				{@html svg}
 			</a>
-		</button>
+		</button> -->
+		<a class="grid" {href}>
+			<button on:click class="nav-btn">
+				<slot name="navLinks" navName={name} />
+				{@html svg}
+			</button>
+		</a>
 	{/each}
 {/if}
 
 <!-- 		class="font-bold bg-neutral-900/20 hover:bg-neutral-100/75 mt-1.5 mr-1.5 rounded-full ease-in-out duration-400 hover:outline outline-offset-2 outline-2 outline-cyan-500 hover:text-neutral-900" -->
 
 {#if $$slots.profile}
-	<button
-		on:click
-		class="profile-btn"
-	>
+	<button on:click class="profile-btn">
 		<slot name="profile" {proSvg} />
 	</button>
 {/if}
 
 {#if $$slots.profileLinks}
 	{#each profileLinks as { name, href }}
-		<button
-			on:click
-			class="grid nav-btn"
-		>
+		<a class="grid" {href}>
+			<button on:click class="nav-btn">
+				<slot name="profileLinks" proName={name} />
+			</button>
+		</a>
+
+		<!-- <button on:click class="grid nav-btn">
 			<a {href}>
 				<slot name="profileLinks" proName={name} />
 			</a>
-		</button>
+		</button> -->
 	{/each}
 {/if}
 
 {#if $$slots.blog}
-	<button
-		on:click
-		class="nav-btn"
-	>
+	<button on:click class="nav-btn">
 		<a href={blog.href}>
 			<slot name="blog" blogName={blog.name} />
 		</a>
@@ -143,10 +146,7 @@
 {/if}
 
 {#if $$slots.calcs}
-	<button
-		on:click
-		class="nav-btn"
-	>
+	<button on:click class="nav-btn">
 		<a href={calcBtn.href}>
 			<slot name="calcs" calcName={calcBtn.name} />
 		</a>
@@ -154,19 +154,13 @@
 {/if}
 
 {#if $$slots.calculate}
-	<button
-		on:click
-		class="justify-self-end nav-btn"
-	>
+	<button on:click class="justify-self-end nav-btn">
 		<slot name="calculate" calculate={calculate.name} />
 	</button>
 {/if}
 
 {#if $$slots.services}
-	<button
-		on:click
-		class="nav-btn"
-	>
+	<button on:click class="nav-btn">
 		<a href={serviceBtn.href}>
 			<slot name="services" serviceName={serviceBtn.name} />
 		</a>
