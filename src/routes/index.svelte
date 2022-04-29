@@ -28,7 +28,7 @@
 		<!-- <Button><p slot="calcs" let:calcName>{calcName}</p></Button> -->
 	</section>
 
-	<CoachCard let:level><p slot="info" class="text-cyan-500 font-bold">Level: {level}</p></CoachCard>
+	<CoachCard let:level><p slot="info" class="text-cyan-500 font-bold my-2">Level: {level}</p></CoachCard>
 
 	<section
 		class="col-span-3 2xl:col-span-4 grid grid-cols-3 content-center text-6xl text-center m-6 text-neutral-100 bg-neutral-700 rounded-xl"

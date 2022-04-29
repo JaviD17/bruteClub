@@ -1,32 +1,35 @@
 <script>
 	import Button from '$lib/components/button.svelte';
 
-	let hovering;
-	let status;
+	let hovering = null;
+	let status = null;
 
-	// function enter() {
-	// 	hovering = true;
-	// }
-	// function leave() {
-	// 	if (!status) {
-	// 		setTimeout(() => {
-	// 			hovering = false;
-	// 		}, 3000);
-	// 	}
-	// }
+	async function handleStatus(hover = null, currentStatus = null) {
+		if (hover && currentStatus) {
+			hovering = hover; // true when on:mouseenter on pro icon
+			status = currentStatus;
 
-	function handleStatus(proHover = null, subHover = null) {
-		// for hovering profile and submenu
-	}
-
-	function handleMessage(event) {
-		console.log(event);
+			// console.log(hover, currentStatus);
+		} else if (!hover && currentStatus === null) {
+			hovering = hover;
+			status = currentStatus;
+			// console.log(hovering, hover);
+		} else if (hover === null && currentStatus) {
+			hovering = hover;
+			status = currentStatus;
+			console.log(hovering, hover);
+		} else if (hover === null && !currentStatus) {
+			setTimeout(() => {
+				hovering = hover;
+				status = currentStatus;
+			}, 3000);
+		}
 	}
 </script>
 
 <section
-	on:mouseenter={() => handleStatus()}
-	on:mouseleave={() => handleStatus()}
+	on:mouseenter={() => handleStatus(true, true)}
+	on:mouseleave={() => handleStatus(false, ...[,])}
 	id="profileIcon"
 	class="md:grid self-start absolute right-2 hidden"
 >
@@ -34,15 +37,14 @@
 		<svelte:fragment slot="profile" let:proSvg>{@html proSvg}</svelte:fragment>
 	</Button>
 </section>
-
-{#if hovering}
+{#if hovering || status}
 	<section
-		on:mouseenter={() => handleStatus(true, true)}
-		on:mouseleave={() => handleStatus(false, false)}
+		on:mouseenter={() => handleStatus(...[,], true)}
+		on:mouseleave={() => handleStatus(...[,], false)}
 		id="submenu"
-		class="bg-neutral-900 absolute right-20 top-4 rounded-lg grid"
+		class="bg-neutral-900 absolute right-20 top-8 rounded-lg grid"
 	>
-		<Button on:click={handleMessage} let:proName>
+		<Button on:click let:proName>
 			<p slot="profileLinks" class="inline">{proName}</p>
 		</Button>
 	</section>

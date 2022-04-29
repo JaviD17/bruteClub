@@ -138,19 +138,19 @@
 {/if}
 
 {#if $$slots.blog}
-	<button on:click class="nav-btn">
-		<a href={blog.href}>
+	<a href={blog.href} class="grid">
+		<button on:click class="nav-btn">
 			<slot name="blog" blogName={blog.name} />
-		</a>
-	</button>
+		</button>
+	</a>
 {/if}
 
 {#if $$slots.calcs}
-	<button on:click class="nav-btn">
-		<a href={calcBtn.href}>
+	<a href={calcBtn.href} class="grid">
+		<button on:click class="nav-btn">
 			<slot name="calcs" calcName={calcBtn.name} />
-		</a>
-	</button>
+		</button>
+	</a>
 {/if}
 
 {#if $$slots.calculate}
@@ -160,9 +160,9 @@
 {/if}
 
 {#if $$slots.services}
-	<button on:click class="nav-btn">
-		<a href={serviceBtn.href}>
+	<a href={serviceBtn.href} class="grid">
+		<button on:click class="nav-btn">
 			<slot name="services" serviceName={serviceBtn.name} />
-		</a>
-	</button>
+		</button>
+	</a>
 {/if}

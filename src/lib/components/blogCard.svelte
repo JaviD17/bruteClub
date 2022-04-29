@@ -27,7 +27,7 @@
 		<a
 			id="inner-card-a"
 			href="./blogs"
-			class="bg-neutral-700 m-8 rounded-lg overflow-hidden flex flex-wrap text-neutral-100 shadow shadow-neutral-600"
+			class="bg-neutral-700 m-8 rounded-lg overflow-hidden text-neutral-100 shadow shadow-neutral-600"
 		>
 			<div id="card-img">
 				<img
@@ -44,10 +44,10 @@
 				<div id="details-by" class="mx-6 border-t-2 border-neutral-100">
 					<h2 class="mt-2 text-3xl font-bold text-cyan-500">{title}</h2>
 					<slot name="info" {date} />
-					<p class="">By: {author}</p>
+					<p>By: {author}</p>
 				</div>
 				<Button on:click
-					><p id="button" class="inline font-bold" slot="blog" let:blogName>{blogName}</p></Button
+					><p id="button" class="font-bold" slot="blog" let:blogName>{blogName}</p></Button
 				>
 			</div>
 		</a>

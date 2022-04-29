@@ -26,9 +26,9 @@
 	{#each newBlog as { title, level, summary }}
 		<a
 			href="./blogs"
-			class="flex flex-col justify-between bg-neutral-700 m-8 rounded-lg overflow-hidden text-neutral-100 shadow shadow-neutral-700"
+			class="grid bg-neutral-700 m-8 rounded-lg overflow-hidden text-neutral-100 shadow shadow-neutral-700"
 		>
-			<section class="text-base">
+			<section id="details" class="text-base overflow-hidden text-center">
 				<div class="p-px m-6">
 					<h2
 						class="p-2 text-3xl font-bold text-cyan-500 text-center border-4 border-neutral-900 rounded-lg"
@@ -37,16 +37,22 @@
 					</h2>
 				</div>
 
-				<div class="mx-6 my-2">
-					<p>{summary}</p>
+				<div class="my-2 self-end">
+					<p class="mx-6">{summary}</p>
+                    <slot name="info" {level} />
 					<Button on:click
 						><p class="inline font-bold" slot="services" let:serviceName>
 							{serviceName}
 						</p></Button
 					>
-					<slot name="info" {level} />
 				</div>
 			</section>
 		</a>
 	{/each}
 {/if}
+
+<style>
+    #details {
+        display: grid;
+    }
+</style>
