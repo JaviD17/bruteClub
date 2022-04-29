@@ -13,7 +13,7 @@
 <section class="main-card lg:grid grid-cols-3 2xl:grid-cols-4">
 	<section
 		id="title"
-		class="col-span-3 2xl:col-span-4 grid content-center text-6xl text-center mx-6 md:mt-16 text-neutral-100 bg-neutral-700 rounded-xl shadow shadow-neutral-700"
+		class="col-span-3 2xl:col-span-4 text-6xl text-center mx-6 md:mt-16 text-neutral-100 bg-neutral-700 rounded-xl shadow shadow-neutral-700"
 	>
 		<h1 class="font-bold bg-neutral-900 my-4">Obsessed Demon Labs O.D.L.</h1>
 		<p class="text-xl">O.D.L.</p>
@@ -28,7 +28,9 @@
 		<!-- <Button><p slot="calcs" let:calcName>{calcName}</p></Button> -->
 	</section>
 
-	<CoachCard let:level><p slot="info" class="text-cyan-500 font-bold my-2">Level: {level}</p></CoachCard>
+	<CoachCard let:level
+		><p slot="info" class="text-cyan-500 font-bold my-2">Level: {level}</p>
+	</CoachCard>
 
 	<section
 		class="col-span-3 2xl:col-span-4 grid grid-cols-3 content-center text-6xl text-center m-6 text-neutral-100 bg-neutral-700 rounded-xl"

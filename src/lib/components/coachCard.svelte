@@ -2,20 +2,20 @@
 	import Button from '$lib/components/button.svelte';
 	let newBlog = [
 		{
-			title: '8-12 Week Cut/Bulk',
+			title: '8-16 Week Cut/Bulk',
 			level: 'Beginner - Advanced',
 			summary:
 				'Get setup with a meal plan catered to you for an 8 week cut / bulk + unlimited questions with a 24hr response time including weekly macro adjustments.'
 		},
 		{
-			title: '10 Week Powerbuilding Plan',
+			title: '10 Week Powerbuilding',
 			level: 'Intermediate - Advanced',
 			summary:
 				'Get setup with a plan catered to you for an 8 week cut / bulk + unlimited questions with a 24hr response time including weekly macro adjustments.'
 		},
 		{
 			title: '16 Week Transformation',
-			level: 'Advanced',
+			level: 'Intermediate - Advanced',
 			summary:
 				'Get setup with a meal plan catered to you for an 8 week cut / bulk + unlimited questions with a 24hr response time including weekly macro adjustments.'
 		}
