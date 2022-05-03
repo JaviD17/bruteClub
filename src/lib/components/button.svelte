@@ -91,6 +91,11 @@
 		name: 'Read More',
 		href: './coaches'
 	};
+
+	let errorPage = {
+		name: 'Visit Home Page',
+		href: '/',
+	}
 </script>
 
 {#if $$slots.navLinks}
@@ -146,6 +151,14 @@
 	<a href={serviceBtn.href} class="grid">
 		<button on:click class="nav-btn">
 			<slot name="services" serviceName={serviceBtn.name} />
+		</button>
+	</a>
+{/if}
+
+{#if $$slots.error}
+	<a href={errorPage.href} class="grid">
+		<button on:click class="nav-btn">
+			<slot name="error" errorName={errorPage.name} />
 		</button>
 	</a>
 {/if}
