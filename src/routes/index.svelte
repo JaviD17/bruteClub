@@ -3,7 +3,7 @@
 	import Button from '$lib/components/button.svelte';
 	import CoachCard from '$lib/components/coachCard.svelte';
 
-	export const title = 'Obsessed Demon Labs';
+	export const title = 'Obsessed Demon Labz';
 </script>
 
 <svelte:head>
