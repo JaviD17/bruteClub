@@ -5,13 +5,13 @@
 			title: '8-16 Week Cut/Bulk',
 			level: 'Beginner - Advanced',
 			summary:
-				'Get setup with a meal plan catered to you for an 8 week cut / bulk + unlimited questions with a 24hr response time including weekly macro adjustments.'
+				'Get setup with a meal plan catered to you for an 8-16 week cut / bulk + unlimited questions with a 24hr response time including weekly macro adjustments.'
 		},
 		{
 			title: '10 Week Powerbuilding',
 			level: 'Intermediate - Advanced',
 			summary:
-				'Get setup with a plan catered to you for an 8 week cut / bulk + unlimited questions with a 24hr response time including weekly macro adjustments.'
+			'Coached through a 10 week powerbuilding program for people wanting to increase functional strength and mobility through a strategic mixture of compound and isolation movements.'
 		},
 		{
 			title: '16 Week Transformation',
@@ -37,8 +37,11 @@
 					</h2>
 				</div>
 
-				<div class="my-2 self-end">
+				<div>
 					<p class="mx-6">{summary}</p>
+				</div>
+
+				<div class="self-end">
                     <slot name="info" {level} />
 					<Button on:click
 						><p class="inline font-bold" slot="services" let:serviceName>
