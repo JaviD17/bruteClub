@@ -10,15 +10,15 @@
 	{#if !loggedIn}
 		<section
 			id="logIn"
-			class="bg-neutral-700 my-10 rounded-lg text-center font-bold col-start-2 col-end-3"
+			class="bg-neutral-700 my-10 rounded-lg text-center col-start-2 col-end-3"
 		>
-			<h3 class="mt-6 text-4xl">Log in</h3>
+			<h3 class="mt-6 text-3xl font-bold">Log in</h3>
 
 			<!-- <section> -->
 			<form class="my-10">
 				<div class="my-2">
 					<div>
-						<label for="username">Email</label>
+						<label for="username" class="text-xl">Email</label>
 					</div>
 					<div>
 						<input
@@ -34,7 +34,7 @@
 
 				<div class="my-2">
 					<div>
-						<label for="password">Password</label>
+						<label for="password" class="text-xl">Password</label>
 					</div>
 					<div>
 						<input
