@@ -103,7 +103,7 @@
 
 <section
 	id="calc-card"
-	class="row-span-2 flex flex-col justify-between bg-neutral-700 mx-10 my-8 pb-2 rounded-lg shadow shadow-neutral-700"
+	class="text-center row-span-2 flex flex-col justify-between bg-neutral-700 mx-10 my-8 pb-2 rounded-lg shadow shadow-neutral-700"
 >
 	<h3 class="text-center mt-4 text-2xl font-bold bg-neutral-900">{calcData.name}</h3>
 	<form id="form" class="text-xl pt-4 overflow-hidden">
@@ -163,7 +163,7 @@
 		</div>
 		<div class="">
 			<label for="activity" class="label-btn">Activity</label><br />
-			<select class="input-btn" id="activity" name="activity" bind:value={calcData.activity}>
+			<select class="input-btn" id="activity" name="activity" bind:value={calcData.activity} size="1">
 				<option value="1.15">Sedentary (little to no exercise)</option>
 				<option value="1.3">Slightly Active (exercise/sports 1-3 hrs/week)</option>
 				<option value="1.50">Moderately Active (exercise/sports 4-6 hrs/week)</option>
@@ -203,5 +203,11 @@
 		/* grid-gap: 1rem; */
 		/* grid-template-columns: 1fr 1fr 1fr;
 		grid-template-rows: 1fr 1fr; */
+	}
+	#activity {
+		width: 18rem;
+	}
+	#goal {
+		width: 18rem;
 	}
 </style>

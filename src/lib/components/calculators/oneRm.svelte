@@ -28,7 +28,7 @@
 
 <section
 	id="calc-card"
-	class="flex flex-col justify-between bg-neutral-700 mx-10 my-8 pb-2 rounded-lg shadow shadow-neutral-700"
+	class="text-center flex flex-col justify-between bg-neutral-700 mx-10 my-8 pb-2 rounded-lg shadow shadow-neutral-700"
 >
 	<h3 class="text-center mt-4 text-2xl font-bold bg-neutral-900">{calcData.name}</h3>
 	<form id="form" class="text-xl pt-4">
