@@ -25,7 +25,6 @@
 		class="col-span-3 2xl:col-span-4 grid grid-cols-3 content-center text-6xl text-center m-6 text-neutral-100 bg-neutral-700 rounded-xl shadow shadow-neutral-700"
 	>
 		<h2 class="font-bold bg-neutral-900 my-4 col-span-3">Coaching</h2>
-		<!-- <Button><p slot="calcs" let:calcName>{calcName}</p></Button> -->
 	</section>
 
 	<CoachCard let:level
