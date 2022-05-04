@@ -33,7 +33,7 @@
 				<img
 					src="./blog1.jpg"
 					alt="man prepping food"
-					class="rounded-lg object-cover object-center h-full"
+					class="rounded-lg object-contain object-center h-full"
 					id="card-img"
 				/>
 			</div>
