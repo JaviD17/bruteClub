@@ -2,7 +2,7 @@
 	import Button from '$lib/components/button.svelte';
 
 	let clicked = null;
-	let status = null;
+	// let status = null;
 
 	let leave = () => {
 		clicked = !clicked;
@@ -13,11 +13,22 @@
 	}
 </script>
 
-<section on:click={handleClick} id="profileIcon" class="md:grid self-start place-content-end right-2 hidden my-2 mx-4">
+<section
+	on:click={handleClick}
+	id="profileIcon"
+	class="md:grid md:self-start justify-self-end md:right-2 m-4 hidden"
+>
 	<Button>
 		<svelte:fragment slot="profile" let:proSvg>{@html proSvg}</svelte:fragment>
 	</Button>
 </section>
+
+<section class="grid self-start justify-self-end place-content-end m-6">
+	<Button on:click={handleClick}>
+		<svelte:fragment slot="mobileProfile" let:proSvg>{@html proSvg}</svelte:fragment>
+	</Button>
+</section>
+
 {#if clicked}
 	<section
 		on:mouseleave={leave}
@@ -37,6 +48,5 @@
 	#submenu {
 		right: 1.5rem;
 		top: 6.5rem;
-
 	}
 </style>

@@ -138,6 +138,12 @@
 	</button>
 {/if}
 
+{#if $$slots.mobileProfile}
+	<button on:click class="profile-btn">
+		<slot name="mobileProfile" {proSvg} />
+	</button>
+{/if}
+
 {#if $$slots.profileLinks}
 	{#each profileLinks as { name, href }}
 		<a class="grid" {href}>

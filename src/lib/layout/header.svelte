@@ -1,6 +1,7 @@
 <script>
 	import Logo from '$lib/layout/logo.svelte';
 	import Nav from '$lib/layout/nav.svelte';
+import Profile from './profile.svelte';
 
 	let clicked = false;
 
@@ -13,6 +14,7 @@
 <header class="md:bg-neutral-800">
 	<Logo on:click={handleClick} />
 	<Nav on:click />
+	<!-- <Profile /> -->
 </header>
 
 <style>
