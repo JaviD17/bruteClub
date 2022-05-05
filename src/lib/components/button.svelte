@@ -139,7 +139,7 @@
 {/if}
 
 {#if $$slots.mobileProfile}
-	<button on:click class="profile-btn">
+	<button on:click class="mobileProfile-btn">
 		<slot name="mobileProfile" {proSvg} />
 	</button>
 {/if}

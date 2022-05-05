@@ -33,6 +33,9 @@
 	.profile-btn {
 		@apply text-xl font-bold bg-neutral-400 hover:bg-neutral-500 rounded-full transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-95 shadow-inner shadow-neutral-900 text-neutral-900;
 	}
+	.mobileProfile-btn {
+		@apply text-xl font-bold bg-neutral-400 rounded-full shadow-inner shadow-neutral-900 text-neutral-900;
+	}
 	.layout-container {
 		@apply grid;
 	}
