@@ -15,22 +15,6 @@
 					</svg
 				 >`
 		},
-		// {
-		// 	name: 'Blog',
-		// 	href: '/blogs',
-		// 	svg: `<svg
-		// 			class="inline"
-		// 			xmlns="http://www.w3.org/2000/svg"
-		// 			viewBox="-2 -2 24 24"
-		// 			width="24"
-		// 			fill="currentColor"
-		// 			><path
-		// 				d="M11.81 15c1.744 0 3.16-1.42 3.17-3.154L15 9.293l-.03-.14-.083-.174-.142-.11c-.184-.144-1.116.01-1.367-.218-.178-.163-.206-.456-.26-.855-.1-.771-.163-.811-.284-1.073-.44-.929-1.63-1.627-2.448-1.723H8.169A3.174 3.174 0 0 0 5 8.16v3.686C5 13.58 6.426 15 8.17 15h3.64zm-3.6-7.419h1.757c.335 0 .607.273.607.604 0 .33-.272.604-.607.604H8.21a.608.608 0 0 1-.607-.604c0-.331.271-.604.607-.604zM7.603 11.8c0-.33.271-.601.607-.601h3.57c.333 0 .604.27.604.601 0 .327-.27.601-.604.601H8.21a.607.607 0 0 1-.607-.601z"
-		// 			/><path
-		// 				d="M4 2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H4zm0-2h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4z"
-		// 			/></svg
-		// 		>`
-		// },
 		{
 			name: 'Calcs',
 			href: '/calcs',
@@ -48,6 +32,31 @@
 				>`
 		},
 		{
+			name: 'Blog',
+			href: '/blogs',
+			svg: `<svg
+					class="inline"
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="-2 -2 24 24"
+					width="24"
+					fill="currentColor"
+					><path
+						d="M11.81 15c1.744 0 3.16-1.42 3.17-3.154L15 9.293l-.03-.14-.083-.174-.142-.11c-.184-.144-1.116.01-1.367-.218-.178-.163-.206-.456-.26-.855-.1-.771-.163-.811-.284-1.073-.44-.929-1.63-1.627-2.448-1.723H8.169A3.174 3.174 0 0 0 5 8.16v3.686C5 13.58 6.426 15 8.17 15h3.64zm-3.6-7.419h1.757c.335 0 .607.273.607.604 0 .33-.272.604-.607.604H8.21a.608.608 0 0 1-.607-.604c0-.331.271-.604.607-.604zM7.603 11.8c0-.33.271-.601.607-.601h3.57c.333 0 .604.27.604.601 0 .327-.27.601-.604.601H8.21a.607.607 0 0 1-.607-.601z"
+					/><path
+						d="M4 2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H4zm0-2h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4z"
+					/></svg
+				>`
+		},
+		{
+			name: 'Guides',
+			href: '/guides',
+			svg: `<svg class="inline" xmlns="http://www.w3.org/2000/svg" viewBox="-5 -2 24 24" width="24" fill="currentColor"
+					><path
+						d="M5 18v2H3v-2H0V0h11a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H5zM3 2H2v14h1V2zm2 0v14h6a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H5zm1 2h5v2H6V4zm0 3h5v2H6V7z"
+					/></svg
+				>`
+		},
+		{
 			name: 'Coaches',
 			href: '/coaches',
 			svg: `<svg class="inline" xmlns="http://www.w3.org/2000/svg" viewBox="-5 -2 24 24" width="24" fill="currentColor"
@@ -56,15 +65,6 @@
 					/></svg
 				>`
 		},
-		// {
-		// 	name: 'Guides',
-		// 	href: '/guides',
-		// 	svg: `<svg class="inline" xmlns="http://www.w3.org/2000/svg" viewBox="-5 -2 24 24" width="24" fill="currentColor"
-		// 			><path
-		// 				d="M5 18v2H3v-2H0V0h11a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H5zM3 2H2v14h1V2zm2 0v14h6a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H5zm1 2h5v2H6V4zm0 3h5v2H6V7z"
-		// 			/></svg
-		// 		>`
-		// },
 		{
 			name: 'About',
 			href: '/about',
@@ -110,6 +110,14 @@
 	let errorPage = {
 		name: 'Visit Home Page',
 		href: '/'
+	};
+
+	let signUpBtn = {
+		name: 'Sign Up'
+	};
+
+	let logInBtn = {
+		name: 'Log In'
 	};
 </script>
 
@@ -176,4 +184,16 @@
 			<slot name="error" errorName={errorPage.name} />
 		</button>
 	</a>
+{/if}
+
+{#if $$slots.signUp}
+	<button on:click class="signUp-btn">
+		<slot name="signUp" signUpName={signUpBtn.name} />
+	</button>
+{/if}
+
+{#if $$slots.logIn}
+	<button on:click class="signUp-btn">
+		<slot name="logIn" logInName={logInBtn.name} />
+	</button>
 {/if}

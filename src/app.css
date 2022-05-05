@@ -27,6 +27,9 @@
 	.nav-btn {
 		@apply text-xl font-bold bg-neutral-400 hover:bg-neutral-500 p-2 my-2.5 mx-4 rounded-full transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-95 shadow-inner shadow-neutral-900 text-neutral-900;
 	}
+	.signUp-btn {
+		@apply text-xl font-bold bg-neutral-400 hover:bg-neutral-500 p-2 my-2.5 mx-4 rounded-full transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-95 shadow-inner shadow-neutral-900 text-neutral-900 justify-self-center px-6;
+	}
 	.profile-btn {
 		@apply text-xl font-bold bg-neutral-400 hover:bg-neutral-500 mt-3 mr-1 rounded-full transition duration-150 ease-in-out hover:-translate-y-1 hover:scale-95 shadow-inner shadow-neutral-900 text-neutral-900;
 	}
