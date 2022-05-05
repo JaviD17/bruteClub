@@ -12,7 +12,7 @@
 
 <header class="md:bg-neutral-800">
 	<Logo on:click={handleClick} />
-	<Nav on:click active={clicked} />
+	<Nav on:click />
 </header>
 
 <style>

@@ -53,7 +53,7 @@
 								name="password"
 								id="password"
 								class="logIn-btn"
-								placeholder="******"
+								placeholder="********"
 								size="40"
 							/>
 						</div>
@@ -86,22 +86,22 @@
 								name="password"
 								id="password"
 								class="logIn-btn"
-								placeholder="******"
+								placeholder="********"
 								size="40"
 							/>
 						</div>
 					</div>
 					<div class="my-2">
 						<div>
-							<label for="password" class="text-xl">Verify Password</label>
+							<label for="verifyPassword" class="text-xl">Verify Password</label>
 						</div>
 						<div>
 							<input
 								type="text"
-								name="password"
-								id="password"
+								name="verifyPassword"
+								id="verifyPassword"
 								class="logIn-btn"
-								placeholder="******"
+								placeholder="********"
 								size="40"
 							/>
 						</div>

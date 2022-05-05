@@ -13,7 +13,7 @@
 	}
 </script>
 
-<section on:click={handleClick} id="profileIcon" class="md:grid self-start absolute right-2 hidden">
+<section on:click={handleClick} id="profileIcon" class="md:grid self-start place-content-end right-2 hidden my-2 mx-4">
 	<Button>
 		<svelte:fragment slot="profile" let:proSvg>{@html proSvg}</svelte:fragment>
 	</Button>
@@ -22,7 +22,7 @@
 	<section
 		on:mouseleave={leave}
 		id="submenu"
-		class="bg-neutral-800/80 absolute top-8 rounded-lg grid py-4 px-1 shadow shadow-neutral-800"
+		class="bg-neutral-800 absolute top-8 rounded-lg grid py-4 px-1 shadow shadow-neutral-800"
 	>
 		<Button on:click let:proName>
 			<p slot="profileLinks" class="inline">{proName}</p>
@@ -35,8 +35,8 @@
 		grid-area: profile;
 	}
 	#submenu {
-		right: 1rem;
-		top: 5.5rem;
+		right: 1.5rem;
+		top: 6.5rem;
 
 	}
 </style>

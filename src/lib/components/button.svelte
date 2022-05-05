@@ -157,7 +157,7 @@
 {/if}
 
 {#if $$slots.calcs}
-	<a href={calcBtn.href} class="grid">
+	<a href={calcBtn.href} class="grid col-start-2 col-end-4">
 		<button on:click class="nav-btn">
 			<slot name="calcs" calcName={calcBtn.name} />
 		</button>

@@ -24,11 +24,11 @@
 <style>
 	#container {
 		/* grid-gap: 1rem; */
-		grid-template-columns: 2fr 18fr 1fr;
+		grid-template-columns: 2fr 17.5fr 0.5fr;
 		grid-template-rows: 1fr 50px;
 		grid-template-areas:
 			'header main profile'
-			'header footer footer';
+			'header footer profile';
 	}
 
 	#main {
